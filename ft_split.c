@@ -1,0 +1,60 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/11 18:15:49 by uherrero          #+#    #+#             */
+/*   Updated: 2019/11/18 02:45:07 by uherrero         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+#include <stdio.h>
+
+static unsigned int	ft_countchar(char const *s, char c)
+{
+	unsigned int	size;
+
+	size = 0;
+	while (*s)
+	{
+		while (*s == c && *s)
+			s++;
+		while (*s != c && *s)
+			s++;
+		if (*(s - 1) != c)
+			size++;
+	}
+	return (size);
+}
+
+char				**ft_split(char const *s, char c)
+{
+	char		**str;
+	char const	*start;
+	char const	*finish;
+	size_t		i;
+	size_t		size;
+
+	if (!s)
+		return (NULL);
+	size = ft_countchar(s, c);
+	if (!(str = (char **)ft_calloc(sizeof(char *), (1 + size))))
+		return (NULL);
+	i = 0;
+	while (*s && size--)
+	{
+		while (*s == c)
+			s++;
+		start = s;
+		while (*s != '\0' && *s != c)
+			s++;
+		finish = s;
+		if (!(str[i] = (char *)ft_calloc(sizeof(char), (1 + finish - start))))
+			return (NULL);
+		str[i++] = ft_substr(start, 0, finish - start);
+	}
+	return (str);
+}
