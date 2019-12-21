@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tixtex <tixtex@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 19:50:56 by uherrero          #+#    #+#             */
-/*   Updated: 2019/11/18 03:26:40 by uherrero         ###   ########.fr       */
+/*   Updated: 2019/12/20 17:43:26 by tixtex           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_digit(unsigned int nb, char *str)
+void	ft_digit(unsigned int nb, char *str)
 {
 	char	c;
 
@@ -48,4 +48,15 @@ char		*ft_itoa(int n)
 	else
 		strnum = ft_strrev(strnum);
 	return (strnum);
+}
+
+char	*ft_utoa(unsigned int num)
+{
+	char	*str_num;
+
+	if ((str_num = ft_calloc(sizeof(char), 11)) == NULL)
+		return (NULL);
+	ft_digit(num, str_num);
+	str_num = ft_strrev(str_num);
+	return (str_num);
 }
