@@ -6,12 +6,12 @@
 /*   By: tixtex <tixtex@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 20:54:58 by uherrero          #+#    #+#             */
-/*   Updated: 2019/12/20 17:44:01 by tixtex           ###   ########.fr       */
+/*   Updated: 2020/02/24 18:16:03 by tixtex           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_LIBFT_H
+# define FT_LIBFT_H
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
