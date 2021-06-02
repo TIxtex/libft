@@ -21,7 +21,7 @@ static void	ft_swapchar(char *c1, char *c2)
 	*c2 = aux;
 }
 
-char		*ft_strrev(char *str)
+char	*ft_strrev(char *str)
 {
 	size_t	size;
 	char	*start;

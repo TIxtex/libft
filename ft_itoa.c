@@ -32,11 +32,12 @@ static void	ft_putnbr(int nb, char *str)
 	ft_digit(nb, str);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*strnum;
 
-	if ((strnum = ft_calloc(sizeof(char), 12)) == NULL)
+	strnum = ft_calloc(sizeof(char), 12);
+	if (NULL == strnum)
 		return (NULL);
 	ft_putnbr(n, strnum);
 	if (*strnum == '-')
@@ -54,7 +55,8 @@ char	*ft_utoa(unsigned int num)
 {
 	char	*str_num;
 
-	if ((str_num = ft_calloc(sizeof(char), 11)) == NULL)
+	str_num = ft_calloc(sizeof(char), 11);
+	if (NULL == str_num)
 		return (NULL);
 	ft_digit(num, str_num);
 	str_num = ft_strrev(str_num);

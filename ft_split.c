@@ -29,7 +29,7 @@ static unsigned int	ft_countchar(char const *s, char c)
 	return (size);
 }
 
-char				**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char		**str;
 	char const	*start;
@@ -40,8 +40,7 @@ char				**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	size = ft_countchar(s, c);
-	if (!(str = (char **)ft_calloc(sizeof(char *), (1 + size))))
-		return (NULL);
+	str = (char **)ft_calloc(sizeof(char *), (1 + size));
 	i = 0;
 	while (*s && size--)
 	{
@@ -51,8 +50,7 @@ char				**ft_split(char const *s, char c)
 		while (*s != '\0' && *s != c)
 			s++;
 		finish = s;
-		if (!(str[i] = (char *)ft_calloc(sizeof(char), (1 + finish - start))))
-			return (NULL);
+		str[i] = (char *)ft_calloc(sizeof(char), (1 + finish - start));
 		str[i++] = ft_substr(start, 0, finish - start);
 	}
 	return (str);

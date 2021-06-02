@@ -19,7 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	total;
 
 	total = size * count;
-	if ((aux = malloc(total)) == NULL)
+	aux = malloc(total);
+	if (NULL == aux)
 		return (NULL);
 	initialaux = aux;
 	while (total-- > 0)

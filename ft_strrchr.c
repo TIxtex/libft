@@ -27,6 +27,8 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (str_aux != NULL)
 		return (str_aux);
+	else if (c_aux == '\0')
+		return ((char *)s);
 	else
-		return ((c_aux == '\0') ? (char *)s : NULL);
+		return (NULL);
 }

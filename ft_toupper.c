@@ -12,5 +12,8 @@
 
 int	ft_toupper(int c)
 {
-	return ((c < 97 || c > 122) ? c : c - 32);
+	if (c < 97 || c > 122)
+		return (c);
+	else
+		return (c - 32);
 }

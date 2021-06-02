@@ -25,5 +25,8 @@ char	*ft_strchr(const char *s, int c)
 			return (str_aux);
 		str_aux++;
 	}
-	return ((c_aux == '\0') ? str_aux : NULL);
+	if (c_aux == '\0')
+		return (str_aux);
+	else
+		return (NULL);
 }

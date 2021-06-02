@@ -24,8 +24,11 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		aux_dst = (unsigned char *)dst;
 		aux_src = (const unsigned char *)src;
 		while (n-- > 0)
-			if ((*(aux_dst++) = *(aux_src++)) == c_aux)
+		{
+			*(aux_dst++) = *(aux_src++);
+			if (*aux_dst == c_aux)
 				return (aux_dst);
+		}
 	}
 	return (NULL);
 }

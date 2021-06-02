@@ -14,7 +14,7 @@
 
 static void	ft_digit(unsigned int nb, int fd)
 {
-	char c;
+	char	c;
 
 	c = '0' + (nb % 10);
 	if (nb / 10)
@@ -22,7 +22,7 @@ static void	ft_digit(unsigned int nb, int fd)
 	write(fd, &c, 1);
 }
 
-void		ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (n < 0)
 	{

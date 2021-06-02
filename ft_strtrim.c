@@ -30,7 +30,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end = --s1;
 	if (end - start > 0)
 	{
-		if (!(str_ret = (char *)ft_calloc(2 + end - start, sizeof(char))))
+		str_ret = (char *)ft_calloc(2 + end - start, sizeof(char));
+		if (NULL == str_ret)
 			return (str_ret);
 		ft_strlcpy(str_ret, start, 2 + end - start);
 	}
