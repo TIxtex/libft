@@ -46,7 +46,8 @@ static int	ft_isnl(char *buf)
 
 static int	ft_get_next_line(int *i, char **buf, char **line, int fd)
 {
-	while ((i[0] = ft_isnl(buf[0])) == -1)
+	i[0] = ft_isnl(buf[0]);
+	while (i[0] == -1)
 	{
 		*line = ft_strjoin2(*line, buf[0]);
 		i[1] = read(fd, buf[0], BUFFER_SIZE);
@@ -62,6 +63,7 @@ static int	ft_get_next_line(int *i, char **buf, char **line, int fd)
 			return (0);
 		}
 		buf[0][i[1]] = '\0';
+		i[0] = ft_isnl(buf[0]);
 	}
 	buf[1] = ft_substr(buf[0], 0, i[0]);
 	*line = ft_strjoin2(*line, buf[1]);
@@ -77,9 +79,9 @@ int	get_next_line(int fd, char **line)
 
 	if (fd < 0 || BUFFER_SIZE < 1 || !line)
 		return (-1);
-	if (!(*line = (char *)ft_calloc(1, 1)))
-		return (-1);
-	if (!(buf[0] = (char *)ft_calloc(BUFFER_SIZE + 1, sizeof(char))))
+	*line = (char *)ft_calloc(1, 1);
+	buf[0] = (char *)ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+	if (buf[0] == NULL || *line == NULL)
 		return (-1);
 	if (s[fd] != NULL)
 	{
@@ -87,7 +89,8 @@ int	get_next_line(int fd, char **line)
 		free(s[fd]);
 		s[fd] = NULL;
 	}
-	if ((i[2] = ft_get_next_line(i, buf, line, fd)) < 1)
+	i[2] = ft_get_next_line(i, buf, line, fd);
+	if (i[2] < 1)
 		return (i[2]);
 	s[fd] = ft_substr(buf[0], i[0] + 1, BUFFER_SIZE - i[0]);
 	free(buf[0]);
