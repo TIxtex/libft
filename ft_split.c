@@ -40,7 +40,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	size = ft_countchar(s, c);
-	str = (char **)ft_calloc(sizeof(char *), (1 + size));
+	str = (char **)ft_calloc(1 + size, sizeof(char *));
 	i = 0;
 	while (*s && size--)
 	{
@@ -50,7 +50,6 @@ char	**ft_split(char const *s, char c)
 		while (*s != '\0' && *s != c)
 			s++;
 		finish = s;
-		str[i] = (char *)ft_calloc(sizeof(char), (1 + finish - start));
 		str[i++] = ft_substr(start, 0, finish - start);
 	}
 	return (str);
