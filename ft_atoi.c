@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-long	ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int		nbr_of_neg;
-	long	returned;
+	int		returned;
 
 	returned = 0;
 	nbr_of_neg = 1;
