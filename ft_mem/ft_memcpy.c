@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tixtex <tixtex@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:49:39 by uherrero          #+#    #+#             */
-/*   Updated: 2020/02/24 18:33:09 by tixtex           ###   ########.fr       */
+/*   Updated: 2022/03/08 14:34:41 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

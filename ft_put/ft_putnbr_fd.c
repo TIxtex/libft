@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 18:57:45 by uherrero          #+#    #+#             */
-/*   Updated: 2019/11/14 19:06:15 by uherrero         ###   ########.fr       */
+/*   Updated: 2022/03/08 14:35:08 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static void	ft_digit(unsigned int nb, int fd)
 {

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_libft.h                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tixtex <tixtex@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 20:54:58 by uherrero          #+#    #+#             */
-/*   Updated: 2020/02/24 18:16:03 by tixtex           ###   ########.fr       */
+/*   Updated: 2022/03/08 17:20:22 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>// write();
-# include <stdlib.h>// malloc();
+# include <unistd.h> // write();
+# include <stdlib.h> // malloc();
 # include <stddef.h>
-
 
 typedef struct s_list
 {

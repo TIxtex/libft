@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tixtex <tixtex@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 18:15:49 by uherrero          #+#    #+#             */
-/*   Updated: 2020/02/24 18:34:54 by tixtex           ###   ########.fr       */
+/*   Updated: 2022/03/08 14:35:16 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static unsigned int	ft_countchar(char const *s, char c)
 {

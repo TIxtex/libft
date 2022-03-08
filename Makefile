@@ -3,47 +3,105 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: uherrero <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/11/08 19:37:36 by uherrero          #+#    #+#              #
-#    Updated: 2019/11/17 20:05:10 by uherrero         ###   ########.fr        #
+#    Created: 2019/11/08 19:37:36 by ulherrer          #+#    #+#              #
+#    Updated: 2022/03/08 21:06:03 by ulherrer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-COMPILER = gcc
-FLAGS = -Wall -Wextra -Werror
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
 
-SOURCES = ft_atoi.c ft_itoa.c ft_calloc.c
+INCLUDE = \
+libft.h \
+ft_gnl/get_next_line.h
 
-SOURCES_CHAR = ft_char/ft_isalnum.c ft_char/ft_isalpha.c ft_char/ft_isascii.c\
-ft_char/ft_isdigit.c ft_char/ft_isprint.c ft_char/ft_isspace.c\
-ft_char/ft_tolower.c ft_char/ft_toupper.c
+DIR_CHAR = ft_char/
+DIR_MEM = ft_mem/
+DIR_STR = ft_str/
+DIR_PUT = ft_put/
+DIR_LST = ft_lst/
+DIR_GNL = ft_gnl/
+DIR_OBJECTS = d_objects/
 
-SOURCES_MEM = ft_mem/ft_bzero.c ft_mem/ft_memccpy.c ft_mem/ft_memchr.c\
-ft_mem/ft_memcmp.c ft_mem/ft_memcpy.c ft_mem/ft_memmove.c ft_mem/ft_memset.c
+SOURCES = \
+ft_atoi.c \
+ft_itoa.c \
+ft_calloc.c
 
-SOURCES_STR = ft_str/ft_split.c ft_str/ft_strchr.c ft_str/ft_strdup.c\
-ft_str/ft_strjoin.c ft_str/ft_strlcat.c ft_str/ft_strlcpy.c ft_str/ft_strlen.c\
-ft_str/ft_strmapi.c ft_str/ft_strncmp.c ft_str/ft_strnstr.c ft_str/ft_strrchr.c\
-ft_str/ft_strrev.c ft_str/ft_strtrim.c ft_str/ft_substr.c
+SOURCES_CHAR = \
+ft_isalnum.c \
+ft_isalpha.c \
+ft_isascii.c \
+ft_isdigit.c \
+ft_isprint.c \
+ft_isspace.c \
+ft_tolower.c \
+ft_toupper.c \
 
-SOURCES_PUT = ft_put/ft_putchar_fd.c ft_put/ft_putendl_fd.c\
-ft_put/ft_puterror.c ft_put/ft_putnbr_fd.c ft_put/ft_putstr_fd.c
+SOURCES_MEM = \
+ft_bzero.c \
+ft_memccpy.c \
+ft_memchr.c \
+ft_memcmp.c \
+ft_memcpy.c \
+ft_memmove.c \
+ft_memset.c
 
-SOURCES_LST = ft_lst/ft_lstadd_back_bonus.c ft_lst/ft_lstadd_front_bonus.c\
-ft_lst/ft_lstclear_bonus.c ft_lst/ft_lstlstdelone_bonus.c\
-ft_lst/ft_lstiter_bonus.c ft_lst/ft_lstlast_bonus.c ft_lst/ft_lstmap_bonus.c\
-ft_lst/ft_lstnew_bonus.c ft_lst/ft_lstsize_bonus.c
+SOURCES_STR = \
+ft_split.c \
+ft_strchr.c \
+ft_strdup.c \
+ft_strjoin.c \
+ft_strlcat.c \
+ft_strlcpy.c \
+ft_strlen.c \
+ft_strmapi.c \
+ft_strncmp.c \
+ft_strnstr.c \
+ft_strrchr.c \
+ft_strrev.c \
+ft_strtrim.c \
+ft_substr.c
 
-SOURCES_GNL = ft_gnl/get_next_line.c
+SOURCES_PUT = \
+ft_putchar_fd.c \
+ft_putendl_fd.c \
+ft_puterror.c \
+ft_putnbr_fd.c \
+ft_putstr_fd.c
 
-OBJECTS = $(SOURCES:.c=.o) $(SOURCES_CHAR:.c=.o) $(SOURCES_MEM:.c=.o) $(SOURCES_STR:.c=.o) $(SOURCES_PUT:.c=.o) $(SOURCES_LST:.c=.o) $(SOURCES_GNL:.c=.o)
+SOURCES_LST = \
+ft_lstadd_back_bonus.c \
+ft_lstadd_front_bonus.c \
+ft_lstclear_bonus.c \
+ft_lstdelone_bonus.c \
+ft_lstiter_bonus.c \
+ft_lstlast_bonus.c \
+ft_lstmap_bonus.c \
+ft_lstnew_bonus.c \
+ft_lstsize_bonus.c
+
+SOURCES_GNL = \
+get_next_line.c
+
+ALL_CHAR = $(SOURCES_CHAR:%.c=$(DIR_CHAR)%.c)
+ALL_MEM = $(SOURCES_MEM:%.c=$(DIR_MEM)%.c)
+ALL_STR = $(SOURCES_STR:%.c=$(DIR_STR)%.c)
+ALL_PUT = $(SOURCES_PUT:%.c=$(DIR_PUT)%.c)
+ALL_LST = $(SOURCES_LST:%.c=$(DIR_LST)%.c)
+ALL_GNL = $(SOURCES_GNL:%.c=$(DIR_GNL)%.c)
+ALL_SOURCES = $(SOURCES) $(ALL_CHAR) $(ALL_MEM) $(ALL_STR) $(ALL_PUT) $(ALL_LST) $(ALL_GNL)
+
+OBJECTS = \
+$(ALL_SOURCES:.c=.o)
 
 .PHONY: all clean fclean f re
 
-$(NAME): $(SOURCES) $(SOURCES_CHAR) $(SOURCES_MEM) $(SOURCES_STR) $(SOURCES_PUT) $(SOURCES_LST) $(SOURCES_GNL)
-	$(COMPILER) $(FLAGS) -c $(SOURCES) $(SOURCES_CHAR) $(SOURCES_MEM) $(SOURCES_STR) $(SOURCES_PUT) $(SOURCES_LST) $(SOURCES_GNL)
+$(NAME): $(OBJECTS) $(INCLUDE)
+#	$(COMPILER) $(FLAGS) -c $(ALL_SOURCES)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 

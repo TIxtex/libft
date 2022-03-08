@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tixtex <tixtex@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 01:55:40 by uherrero          #+#    #+#             */
-/*   Updated: 2020/02/24 18:31:03 by tixtex           ###   ########.fr       */
+/*   Updated: 2022/03/08 14:36:33 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# include "libft.h"
+# include "../libft.h"
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 64
 # endif

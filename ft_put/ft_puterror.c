@@ -1,14 +1,4 @@
-#include "libft.h"
-
-static size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	while (*(s++) != '\0')
-		len++;
-	return (len);
-}
+#include "../libft.h"
 
 void	ft_puterror(const char	*error)
 {
