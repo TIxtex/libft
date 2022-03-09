@@ -17,7 +17,7 @@ long	ft_atoi(const char *str)
 	long		nbr_of_neg;
 	long		returned;
 
-	returned = 0;
+	returned = ZERO;
 	nbr_of_neg = 1;
 	while (ft_isspace(*str))
 		str++;
@@ -25,6 +25,6 @@ long	ft_atoi(const char *str)
 		if (*(str++) == '-')
 			nbr_of_neg *= -1;
 	while (ft_isdigit(*str))
-		returned = (returned * 10) + (*(str++) - 48);
+		returned = (returned * 10) + (*(str++) - '0');
 	return (returned * nbr_of_neg);
 }

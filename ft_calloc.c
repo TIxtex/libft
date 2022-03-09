@@ -14,16 +14,14 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*aux;
-	void	*initialaux;
+	char	*aux;
 	size_t	total;
 
 	total = size * count;
-	aux = malloc(total);
+	aux = (char *)malloc(total);
 	if (NULL == aux)
 		return (NULL);
-	initialaux = aux;
-	while (total-- > 0)
-		*((char *)aux++) = 0;
-	return (initialaux);
+	while (total--)
+		aux[total] = ZERO;
+	return ((void *)aux);
 }
