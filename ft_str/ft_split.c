@@ -12,7 +12,7 @@
 
 #include "../libft.h"
 
-static unsigned int	ft_countchar(char const *s, char c)
+static unsigned int	ft_count_word(char const *s, char c)
 {
 	unsigned int	size;
 
@@ -39,7 +39,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	size = ft_countchar(s, c);
+	size = ft_count_word(s, c);
 	str = (char **)ft_calloc(1 + size, sizeof(char *));
 	i = 0;
 	while (*s && size--)

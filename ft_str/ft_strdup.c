@@ -14,13 +14,13 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*aux;
+	char	*str;
 	size_t	size;
 
 	size = ft_strlen(s1) + 1;
-	aux = (char *)ft_calloc(size, sizeof(char));
-	if (NULL == aux)
+	str = (char *)ft_calloc(size, sizeof(char));
+	if (NULL == str)
 		return (NULL);
-	ft_strlcpy(aux, s1, size);
-	return (aux);
+	ft_strlcpy(str, s1, size);
+	return (str);
 }

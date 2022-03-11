@@ -15,18 +15,14 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char	*str_aux;
-	char	c_aux;
+	char	chr;
 
-	c_aux = (char)c;
+	chr = (char)c;
 	str_aux = (char *)s;
-	while (*str_aux != '\0')
-	{
-		if (*str_aux == c_aux)
+	while (*(++str_aux))
+		if (*str_aux == chr)
 			return (str_aux);
-		str_aux++;
-	}
-	if (c_aux == '\0')
-		return (str_aux);
-	else
+	if (chr)
 		return (NULL);
+	return (str_aux);
 }

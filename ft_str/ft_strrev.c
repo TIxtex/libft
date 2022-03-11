@@ -21,16 +21,13 @@ static void	ft_swapchar(char *c1, char *c2)
 	*c2 = aux;
 }
 
-char	*ft_strrev(char *str)
+void	ft_strrev(char *str)
 {
 	size_t	size;
-	char	*start;
 	char	*end;
 
-	start = str;
 	size = ft_strlen(str);
 	end = str + size - 1;
-	while (start < end)
-		ft_swapchar(start++, end--);
-	return (str);
+	while (str < end)
+		ft_swapchar(str++, end--);
 }

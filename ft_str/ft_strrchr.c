@@ -19,16 +19,15 @@ char	*ft_strrchr(const char *s, int c)
 
 	c_aux = (char)c;
 	str_aux = NULL;
-	while (*s != '\0')
+	while (*s)
 	{
 		if (*s == c_aux)
 			str_aux = (char *)s;
 		s++;
 	}
-	if (str_aux != NULL)
+	if (str_aux)
 		return (str_aux);
-	else if (c_aux == '\0')
+	else if (!c_aux)
 		return ((char *)s);
-	else
-		return (NULL);
+	return (NULL);
 }

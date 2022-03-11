@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_digit(unsigned int nb, char *str)
+static void	ft_digit_itoa(unsigned int nb, char *str)
 {
 	char	c;
 
@@ -22,14 +22,14 @@ void	ft_digit(unsigned int nb, char *str)
 	*str = c;
 }
 
-static void	ft_putnbr(int nb, char *str)
+static void	ft_putnbr_itoa(int nb, char *str)
 {
 	if (nb < 0)
 	{
 		nb *= -1;
 		*(str++) = '-';
 	}
-	ft_digit(nb, str);
+	ft_digit_itoa(nb, str);
 }
 
 char	*ft_itoa(int n)
@@ -39,15 +39,11 @@ char	*ft_itoa(int n)
 	strnum = ft_calloc(sizeof(char), 12);
 	if (NULL == strnum)
 		return (NULL);
-	ft_putnbr(n, strnum);
+	ft_putnbr_itoa(n, strnum);
 	if (*strnum == '-')
-	{
-		strnum++;
-		strnum = ft_strrev(strnum);
-		strnum--;
-	}
+		ft_strrev(strnum + 1);
 	else
-		strnum = ft_strrev(strnum);
+		ft_strrev(strnum);
 	return (strnum);
 }
 
@@ -58,7 +54,7 @@ char	*ft_utoa(unsigned int num)
 	str_num = ft_calloc(sizeof(char), 11);
 	if (NULL == str_num)
 		return (NULL);
-	ft_digit(num, str_num);
-	str_num = ft_strrev(str_num);
+	ft_digit_itoa(num, str_num);
+	ft_strrev(str_num);
 	return (str_num);
 }

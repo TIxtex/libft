@@ -36,6 +36,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		ft_strlcpy(str_ret, start, 2 + end - start);
 	}
 	else
-		str_ret = ft_calloc(1, 1);
+		str_ret = (char *)ft_calloc(1, sizeof(char));
 	return (str_ret);
 }

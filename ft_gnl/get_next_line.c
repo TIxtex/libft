@@ -12,27 +12,6 @@
 
 #include "get_next_line.h"
 
-static char	*ft_strjoin2(char const *s1, char const *s2)
-{
-	char	*new_str;
-	char	*start;
-	char	*s1_aux;
-
-	if (!s1 || !s2)
-		return (NULL);
-	new_str = (char *)ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, 1);
-	if (NULL == new_str)
-		return (NULL);
-	start = new_str;
-	s1_aux = (char *)s1;
-	while (*s1)
-		*(new_str++) = *(s1++);
-	free(s1_aux);
-	while (*s2)
-		*(new_str++) = *(s2++);
-	return (start);
-}
-
 static int	ft_isnl(char *buf)
 {
 	int		index;
@@ -49,7 +28,7 @@ static int	ft_get_next_line(int *i, char **buf, char **line, int fd)
 	i[0] = ft_isnl(buf[0]);
 	while (i[0] == -1)
 	{
-		*line = ft_strjoin2(*line, buf[0]);
+		*line = ft_strjoin_f1(*line, buf[0]);
 		i[1] = read(fd, buf[0], BUFFER_SIZE);
 		if (i[1] == -1)
 		{
@@ -66,7 +45,7 @@ static int	ft_get_next_line(int *i, char **buf, char **line, int fd)
 		i[0] = ft_isnl(buf[0]);
 	}
 	buf[1] = ft_substr(buf[0], 0, i[0]);
-	*line = ft_strjoin2(*line, buf[1]);
+	*line = ft_strjoin_f1(*line, buf[1]);
 	free(buf[1]);
 	return (1);
 }
