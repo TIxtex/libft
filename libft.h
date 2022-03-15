@@ -15,9 +15,17 @@
 
 # include <unistd.h> // write();
 # include <stdlib.h> // malloc();
-# include <stddef.h>
-# include "ft_lst/lst.h"
+# include <stddef.h> // NULL, size_t, offsetof();
+# include <errno.h>
 # include "my_constant.h"
+# include "ft_lst/lst.h"
+# include "ft_gnl/get_next_line.h"
+
+//START_FT_NUMBERS
+long	ft_atoi(const char *str);
+char	*ft_itoa(int n);
+char	*ft_utoa(unsigned int num);
+//END_FT_NUMBERS
 
 //START_FT_CHAR
 int		ft_isalnum(int c);
@@ -58,6 +66,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t count, size_t size);
 //END_FT_MEM
 
 //START_FT_PUT
@@ -67,13 +76,5 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_puterror(const char *error);
 //END_FT_PUT
-
-
-
-long	ft_atoi(const char *str);
-void	*ft_calloc(size_t count, size_t size);
-char	*ft_itoa(int n);
-char	*ft_utoa(unsigned int num);
-
 
 #endif

@@ -1,8 +1,6 @@
 #ifndef LST_H
 # define LST_H
 
-# include "my_constant.h"
-
 typedef struct s_list
 {
 	void			*content;
@@ -22,3 +20,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 //END_FT_LST
 
 #endif
+

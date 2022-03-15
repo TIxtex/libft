@@ -16,20 +16,22 @@ CFLAGS = -Wall -Wextra -Werror
 
 INCLUDE = \
 libft.h \
+my_constant.h \
+ft_lst/lst.h \
 ft_gnl/get_next_line.h
 
 DIR_CHAR = ft_char/
 DIR_MEM = ft_mem/
+DIR_NUM = ft_num/
 DIR_STR = ft_str/
 DIR_PUT = ft_put/
 DIR_LST = ft_lst/
 DIR_GNL = ft_gnl/
 DIR_OBJECTS = d_objects/
 
-SOURCES = \
+SOURCES_NUM = \
 ft_atoi.c \
 ft_itoa.c \
-ft_calloc.c
 
 SOURCES_CHAR = \
 ft_isalnum.c \
@@ -48,7 +50,8 @@ ft_memchr.c \
 ft_memcmp.c \
 ft_memcpy.c \
 ft_memmove.c \
-ft_memset.c
+ft_memset.c \
+ft_calloc.c
 
 SOURCES_STR = \
 ft_split.c \
@@ -89,11 +92,12 @@ get_next_line.c
 
 ALL_CHAR = $(SOURCES_CHAR:%.c=$(DIR_CHAR)%.c)
 ALL_MEM = $(SOURCES_MEM:%.c=$(DIR_MEM)%.c)
+ALL_NUM = $(SOURCES_NUM:%.c=$(DIR_NUM)%.c)
 ALL_STR = $(SOURCES_STR:%.c=$(DIR_STR)%.c)
 ALL_PUT = $(SOURCES_PUT:%.c=$(DIR_PUT)%.c)
 ALL_LST = $(SOURCES_LST:%.c=$(DIR_LST)%.c)
 ALL_GNL = $(SOURCES_GNL:%.c=$(DIR_GNL)%.c)
-ALL_SOURCES = $(SOURCES) $(ALL_CHAR) $(ALL_MEM) $(ALL_STR) $(ALL_PUT) $(ALL_LST) $(ALL_GNL)
+ALL_SOURCES = $(ALL_CHAR) $(ALL_MEM) $(ALL_NUM) $(ALL_STR) $(ALL_PUT) $(ALL_LST) $(ALL_GNL)
 
 OBJECTS = \
 $(ALL_SOURCES:.c=.o)
