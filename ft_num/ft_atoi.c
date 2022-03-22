@@ -12,7 +12,7 @@
 
 #include "../libft.h"
 
-long	ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	long		nbr_of_neg;
 	long		returned;
@@ -23,8 +23,8 @@ long	ft_atoi(const char *str)
 		str++;
 	if (*str == '+' || *str == '-')
 		if (*(str++) == '-')
-			nbr_of_neg *= -1;
+			nbr_of_neg = -1;
 	while (ft_isdigit(*str))
 		returned = (returned * 10) + (*(str++) - '0');
-	return (returned * nbr_of_neg);
+	return ((int)(returned * nbr_of_neg));
 }

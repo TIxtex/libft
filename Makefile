@@ -17,6 +17,7 @@ CFLAGS = -Wall -Wextra -Werror
 INCLUDE = \
 libft.h \
 my_constant.h \
+my_types.h \
 ft_lst/lst.h \
 ft_gnl/get_next_line.h
 
@@ -27,11 +28,12 @@ DIR_STR = ft_str/
 DIR_PUT = ft_put/
 DIR_LST = ft_lst/
 DIR_GNL = ft_gnl/
+DIR_TIme = ft_cronos/
 DIR_OBJECTS = d_objects/
 
 SOURCES_NUM = \
 ft_atoi.c \
-ft_itoa.c \
+ft_itoa.c
 
 SOURCES_CHAR = \
 ft_isalnum.c \
@@ -41,7 +43,7 @@ ft_isdigit.c \
 ft_isprint.c \
 ft_isspace.c \
 ft_tolower.c \
-ft_toupper.c \
+ft_toupper.c
 
 SOURCES_MEM = \
 ft_bzero.c \
@@ -90,6 +92,10 @@ ft_lstsize_bonus.c
 SOURCES_GNL = \
 get_next_line.c
 
+SOURCES_TIME = \
+ft_time_now.c \
+ft_time_diff.c
+
 ALL_CHAR = $(SOURCES_CHAR:%.c=$(DIR_CHAR)%.c)
 ALL_MEM = $(SOURCES_MEM:%.c=$(DIR_MEM)%.c)
 ALL_NUM = $(SOURCES_NUM:%.c=$(DIR_NUM)%.c)
@@ -97,7 +103,17 @@ ALL_STR = $(SOURCES_STR:%.c=$(DIR_STR)%.c)
 ALL_PUT = $(SOURCES_PUT:%.c=$(DIR_PUT)%.c)
 ALL_LST = $(SOURCES_LST:%.c=$(DIR_LST)%.c)
 ALL_GNL = $(SOURCES_GNL:%.c=$(DIR_GNL)%.c)
-ALL_SOURCES = $(ALL_CHAR) $(ALL_MEM) $(ALL_NUM) $(ALL_STR) $(ALL_PUT) $(ALL_LST) $(ALL_GNL)
+ALL_TIME = $(SOURCES_TIME:%.c=$(DIR_TIME)%.c)
+
+ALL_SOURCES = \
+$(ALL_CHAR) \
+$(ALL_MEM) \
+$(ALL_NUM) \
+$(ALL_STR) \
+$(ALL_PUT) \
+$(ALL_LST) \
+$(ALL_GNL) \
+$(ALL_TIME)
 
 OBJECTS = \
 $(ALL_SOURCES:.c=.o)

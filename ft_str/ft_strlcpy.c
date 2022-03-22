@@ -23,7 +23,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	{
 		while (dstsize-- && *src)
 			*(dest++) = *(src++);
-		*dest = '\0';
+		*dest = ZERO;
 	}
 	return (ft_strlen(str));
 }

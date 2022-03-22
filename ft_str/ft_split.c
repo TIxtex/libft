@@ -41,13 +41,15 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	size = ft_count_word(s, c);
 	str = (char **)ft_calloc(1 + size, sizeof(char *));
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (*s && size--)
 	{
 		while (*s == c)
 			s++;
 		start = s;
-		while (*s != '\0' && *s != c)
+		while (*s && *s != c)
 			s++;
 		finish = s;
 		str[i++] = ft_substr(start, 0, finish - start);

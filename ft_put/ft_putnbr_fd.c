@@ -16,9 +16,9 @@ static void	ft_digit(unsigned int nb, int fd)
 {
 	char	c;
 
-	c = '0' + (nb % 10);
 	if (nb / 10)
 		ft_digit(nb / 10, fd);
+	c = '0' + (nb % 10);
 	write(fd, &c, sizeof(char));
 }
 

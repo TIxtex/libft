@@ -2,6 +2,8 @@
 # define MY_CONSTANT_H
 
 #define ZERO 0
+#define TRUE 1
+#define FALSE 0
 #define TO_UPPER 32
 #define TO_LOWER 32
 #define A_UPPER 65

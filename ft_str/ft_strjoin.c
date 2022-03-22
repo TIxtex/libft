@@ -30,7 +30,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (start);
 }
 
-char	*ft_strjoin_f1(char const *s1, char const *s2)
+char	*ft_strjoin_f1(char *s1, char const *s2)
 {
 	char	*nw_str;
 	char	*start;
@@ -51,7 +51,7 @@ char	*ft_strjoin_f1(char const *s1, char const *s2)
 	return (start);
 }
 
-char	*ft_strjoin_f2(char const *s1, char const *s2)
+char	*ft_strjoin_f2(char const *s1, char *s2)
 {
 	char	*nw_str;
 	char	*start;
@@ -72,7 +72,7 @@ char	*ft_strjoin_f2(char const *s1, char const *s2)
 	return (start);
 }
 
-char	*ft_strjoin_f1_f2(char const *s1, char const *s2)
+char	*ft_strjoin_f1_f2(char *s1, char *s2)
 {
 	char	*nw_str;
 	char	*start;

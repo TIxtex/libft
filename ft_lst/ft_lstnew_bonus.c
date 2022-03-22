@@ -17,9 +17,10 @@ t_list	*ft_lstnew(void *content)
 	t_list	*new;
 
 	new = (t_list *)ft_calloc(1, sizeof(t_list));
-	if (NULL == new)
-		return (new);
-	new->next = NULL;
-	new->content = content;
+	if (new)
+	{
+		new->next = NULL;
+		new->content = content;
+	}
 	return (new);
 }

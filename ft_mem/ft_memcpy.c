@@ -14,14 +14,24 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char		*aux_dst;
-	const char	*aux_src;
-
 	if (!dst && !src)
 		return (NULL);
-	aux_src = (const char *)src;
-	aux_dst = (char *)dst;
-	while (n--)
-		*(aux_dst++) = *(aux_src++);
+	if (n)
+	{
+		(char *)*(dst) = (const char *)*(src);
+		ft_memcpy(dst + TRUE, src + TRUE, --n);
+	}
+	return (dst);
+}
+
+void	*ft_memcpy_r(void *dst, const void *src, size_t n)
+{
+	if (!dst && !src)
+		return (NULL);
+	if (n)
+	{
+		ft_memcpy(dst + TRUE, src + TRUE, --n);
+		(char *)*(dst) = (const char *)*(src);
+	}
 	return (dst);
 }

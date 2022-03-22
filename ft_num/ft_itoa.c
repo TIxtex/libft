@@ -14,12 +14,9 @@
 
 static void	ft_digit_itoa(unsigned int nb, char *str)
 {
-	char	c;
-
-	c = '0' + (nb % 10);
 	if (nb / 10)
-		ft_digit(nb / 10, str + 1);
-	*str = c;
+		ft_digit_itoa(nb / 10, str + 1);
+	*str = '0' + (nb % 10);
 }
 
 static void	ft_putnbr_itoa(int nb, char *str)
@@ -34,27 +31,27 @@ static void	ft_putnbr_itoa(int nb, char *str)
 
 char	*ft_itoa(int n)
 {
-	char	*strnum;
+	char	*str_num;
 
-	strnum = ft_calloc(sizeof(char), 12);
-	if (NULL == strnum)
+	str_num = (char *)ft_calloc(12, sizeof(char));
+	if (NULL == str_num)
 		return (NULL);
-	ft_putnbr_itoa(n, strnum);
-	if (*strnum == '-')
-		ft_strrev(strnum + 1);
+	ft_putnbr_itoa(n, str_num);
+	if (*str_num == '-')
+		ft_strrev(str_num + 1);
 	else
-		ft_strrev(strnum);
-	return (strnum);
+		ft_strrev(str_num);
+	return (str_num);
 }
 
-char	*ft_utoa(unsigned int num)
+char	*ft_utoa(unsigned int n)
 {
 	char	*str_num;
 
-	str_num = ft_calloc(sizeof(char), 11);
+	str_num = (char *)ft_calloc(11, sizeof(char));
 	if (NULL == str_num)
 		return (NULL);
-	ft_digit_itoa(num, str_num);
+	ft_digit_itoa(n, str_num);
 	ft_strrev(str_num);
 	return (str_num);
 }

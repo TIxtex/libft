@@ -14,14 +14,12 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*aux;
-	size_t	total;
+	void	*new;
+	size_t	bytes;
 
-	total = size * count;
-	aux = (char *)malloc(total);
-	if (NULL == aux)
+	bytes = size * count;
+	new = malloc(bytes);
+	if (!new)
 		return (NULL);
-	while (total--)
-		aux[total] = ZERO;
-	return ((void *)aux);
+	return (ft_memset(new, ZERO, bytes));
 }

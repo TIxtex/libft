@@ -7,6 +7,13 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
+typedef struct s_list_link
+{
+	void			*content;
+	struct s_list_link	*next;
+	struct s_list_link	*prev;
+}				t_list_link;
+
 //START_FT_LST
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **alst, t_list *new);
