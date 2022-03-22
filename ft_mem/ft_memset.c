@@ -21,3 +21,37 @@ void	*ft_memset(void *dst, int c, size_t len)
 	}
 	return (dst);
 }
+
+void	*ft_memset_0(void *dst, int c, size_t len)
+{
+	if (len)
+	{
+		*(unsigned char *)dst = (unsigned char)c;
+		ft_memset(dst + 1, c, len - 1);
+	}
+	return (dst);
+}
+
+void	*ft_memset_1(void *dst, int c, size_t len)
+{
+	unsigned char *dst_aux;
+	unsigned char aux_c;
+
+	aux_c = (unsigned char)c;
+	dst_aux = (unsigned char *)dst
+	while (len--)
+		*(aux_dst++) = aux_c;
+	return (dst);
+}
+
+void	*ft_memset_2(void *dst, int c, size_t len)
+{
+	unsigned char *dst_aux;
+	unsigned char aux_c;
+
+	aux_c = (unsigned char)c;
+	dst_aux = (unsigned char *)dst
+	while (len--)
+		aux_dst[len] = aux_c;
+	return (dst);
+}

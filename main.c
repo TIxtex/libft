@@ -2,6 +2,10 @@
 #include <string.h>
 #include "libft.h"
 
+void	*ft_memset_0(void *b, int c, size_t len);
+void	*ft_memset_1(void *b, int c, size_t len);
+void	*ft_memset_2(void *b, int c, size_t len);
+
 long long	test(void *f(void *, int, size_t), void *dst, int c, size_t len)
 {
 	int		time_i;
@@ -29,10 +33,19 @@ int	main(void)
 	test_v = ft_calloc(len + 1, sizeof(char));
 	if (!test_v)
 		return (0);
-	printf("Time: %lld		memset()\n", test(fun, test_v, c, len));
+	printf("Time: %lld	memset()\n", test(fun, test_v, c, len));
 	ft_bzero(test_v, len + 1);
 	fun = &ft_memset;
-	printf("Time: %lld		ft_memset()\n", test(fun, test_v, c, len));
+	printf("Time: %lld	ft_memset()\n", test(fun, test_v, c, len));
+	ft_bzero(test_v, len + 1);
+	fun = &ft_memset_0;
+	printf("Time: %lld	ft_memset_0()\n", test(fun, test_v, c, len));
+	ft_bzero(test_v, len + 1);
+	fun = &ft_memset_1;
+	printf("Time: %lld	ft_memset_1()\n", test(fun, test_v, c, len));
+	ft_bzero(test_v, len + 1);
+	fun = &ft_memset_2;
+	printf("Time: %lld	ft_memset_2()\n", test(fun, test_v, c, len));
 	free(test_v);
 	return (42);
 }
