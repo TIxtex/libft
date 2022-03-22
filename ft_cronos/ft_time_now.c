@@ -1,9 +1,9 @@
-#include <../libft.h>
+#include "../libft.h"
 
-int	ft_time_now(void)
+long long	ft_time_now(void)
 {
-	struct timeval time;
+	struct timeval	time;
 
-	gettimeofdat(&time, NULL);
+	gettimeofday(&time, NULL);
 	return ((time.tv_sec * 1000) + (time.tv_usec / 1000));
 }

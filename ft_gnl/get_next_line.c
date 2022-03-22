@@ -6,11 +6,11 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 02:10:52 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 14:36:29 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/03/22 16:46:18 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../libft.h"
 
 static int	ft_isnl(char *buf)
 {

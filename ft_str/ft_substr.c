@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 18:14:30 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 14:35:57 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/03/22 16:42:51 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str_ret = (char *)ft_calloc(++size, sizeof(char));
 	if (NULL == str_ret)
 		return (NULL);
-	ft_strlcpy(str_ret, sub_start, c);
+	ft_strlcpy(str_ret, sub_start, size);
 	return (str_ret);
 }

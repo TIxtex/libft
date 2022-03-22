@@ -6,7 +6,7 @@
 #    By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/08 19:37:36 by ulherrer          #+#    #+#              #
-#    Updated: 2022/03/08 21:06:03 by ulherrer         ###   ########.fr        #
+#    Updated: 2022/03/22 16:46:53 by ulherrer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ DIR_STR = ft_str/
 DIR_PUT = ft_put/
 DIR_LST = ft_lst/
 DIR_GNL = ft_gnl/
-DIR_TIme = ft_cronos/
+DIR_TIME = ft_cronos/
 DIR_OBJECTS = d_objects/
 
 SOURCES_NUM = \

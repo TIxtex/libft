@@ -1,6 +1,6 @@
-#include <../libft.h>
+#include "../libft.h"
 
-int	ft_time_diff(int start, int end)
+long long	ft_time_diff(long long start, long long end)
 {
 	return (end - start);
 }

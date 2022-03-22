@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 13:38:31 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 14:34:04 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/03/22 16:44:07 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_lstsize(t_list *lst)
 {
 	if (lst)
-		return (TRUE + ft_lstsize(lst->next))
+		return (TRUE + ft_lstsize(lst->next));
 	return (FALSE);
 }

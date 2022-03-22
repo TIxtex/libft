@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 20:54:58 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 17:20:22 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/03/22 17:49:08 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h> // malloc();
 # include <stddef.h> // NULL, size_t, offsetof();
 # include <errno.h>
-# include <time.h> // gettimeofday();
+# include <sys/time.h> // gettimeofday();
 # include "my_constant.h"
 # include "my_types.h" // t_smart_str
 # include "ft_lst/lst.h"
@@ -49,9 +49,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strjoin_f1(char *s1, char const *s2)
-char	*ft_strjoin_f2(char const *s1, char *s2)
-char	*ft_strjoin_f1_f2(char *s1, char *s2)
+char	*ft_strjoin_f1(char *s1, char const *s2);
+char	*ft_strjoin_f2(char const *s1, char *s2);
+char	*ft_strjoin_f1_f2(char *s1, char *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
@@ -81,8 +81,8 @@ void	ft_puterror(const char *error);
 //END_FT_PUT
 
 // START_FT_TIME
-int		ft_time_now(void);
-int		ft_time_diff(int start, int end);
+long long	ft_time_now(void);
+long long	ft_time_diff(long long start, long long end);
 //END_FT_TIME
 
 #endif

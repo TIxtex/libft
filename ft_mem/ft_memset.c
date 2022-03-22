@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:21:47 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 14:34:48 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/03/22 16:33:48 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	*ft_memset(void *dst, int c, size_t len)
 {
 	if (len)
 	{
-		(unsigned char *)*dst = (unsigned char)c;
-		ft_memset(dst + TRUE, c, --len)
+		*(unsigned char *)dst = (unsigned char)c;
+		ft_memset(dst + TRUE, c, --len);
 	}
 	return (dst);
 }
