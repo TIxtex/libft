@@ -2,11 +2,10 @@
 #include <string.h>
 #include "libft.h"
 
-void	*ft_memset_0(void *b, int c, size_t len);
-void	*ft_memset_1(void *b, int c, size_t len);
-void	*ft_memset_2(void *b, int c, size_t len);
+void	*ft_memcpy_1(void *dst, const void *src, size_t n);
+void	*ft_memcpy_2(void *dst, const void *src, size_t n);
 
-long long	test(void *f(void *, int, size_t), void *dst, int c, size_t len)
+long long	test(void *f(void *, const void *, size_t), void *dst, const void *src, size_t len)
 {
 	int		time_i;
 	int		time_end;
@@ -15,7 +14,7 @@ long long	test(void *f(void *, int, size_t), void *dst, int c, size_t len)
 	i = ZERO;
 	time_i = ft_time_now();
 	while (++i < 126)
-		f(dst, i, len);
+		f(dst, src, len);
 	time_end = ft_time_now();
 	return (ft_time_diff(time_i, time_end));
 }
