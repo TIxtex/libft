@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 20:54:58 by uherrero          #+#    #+#             */
-/*   Updated: 2022/04/03 20:00:12 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/04/04 15:38:59 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stdlib.h> // malloc();
 # include <stddef.h> // NULL, size_t, offsetof();
 # include <sys/types.h>// u_char
+# include <sys/time.h>// gettimeofday();
+# include <sys/errno.h>
 # include "my_constant.h"
 # include "my_types.h" // t_smart_str
 # include "ft_lst/lst.h"

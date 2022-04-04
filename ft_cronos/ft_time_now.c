@@ -1,5 +1,4 @@
 #include "../libft.h"
-#include <sys/time.h>
 
 long long	ft_time_now(void)
 {

@@ -6,7 +6,7 @@
 #    By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/08 19:37:36 by ulherrer          #+#    #+#              #
-#    Updated: 2022/03/22 16:46:53 by ulherrer         ###   ########.fr        #
+#    Updated: 2022/04/04 15:49:19 by ulherrer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -121,7 +121,6 @@ $(ALL_SOURCES:.c=.o)
 .PHONY: all clean fclean f re
 
 $(NAME): $(OBJECTS) $(INCLUDE)
-#	$(COMPILER) $(FLAGS) -c $(ALL_SOURCES)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
