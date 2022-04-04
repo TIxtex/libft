@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 15:47:42 by uherrero          #+#    #+#             */
-/*   Updated: 2019/11/06 15:53:09 by uherrero         ###   ########.fr       */
+/*   Updated: 2022/04/03 18:30:56 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int	ft_tolower(int c)
 	if (c < A_UPPER || c > Z_UPPER)
 		return (c);
 	else
-		return (c + TO_LOWER);
+		return (c TO_LOWER);
 }

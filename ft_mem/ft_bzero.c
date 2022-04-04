@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:39:49 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 14:34:28 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/04/03 18:54:17 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, ZERO, n);
+	register size_t	size;
+	register u_char	*dst;
+
+	size = n;
+	dst = s;
+	while (size--)
+		if (dst[size])
+			dst[size] = dst[size] << __CHAR_BIT__ | dst[size];
 }

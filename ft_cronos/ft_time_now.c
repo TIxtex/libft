@@ -1,9 +1,10 @@
 #include "../libft.h"
+#include <sys/time.h>
 
 long long	ft_time_now(void)
 {
 	struct timeval	time;
 
 	gettimeofday(&time, NULL);
-	return ((time.tv_sec * 1000) + (time.tv_usec / 1000));
+	return ((time.tv_sec * _1K) + (time.tv_usec / _1K));
 }
