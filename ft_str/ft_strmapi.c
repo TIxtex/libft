@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 15:32:17 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 14:35:37 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/04/09 19:25:25 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*new_str;
-	unsigned int	i;
+	char			*new;
+	unsigned int	tam;
 
 	if (!s)
 		return (NULL);
-	i = ft_strlen(s) + 1;
-	new_str = (char *)ft_calloc(i--, sizeof(char));
-	if (NULL == new_str)
+	tam = ft_strlen(s);
+	new = (char *)ft_calloc(tam + 1, sizeof(char));
+	if (!new)
 		return (NULL);
-	while (i--)
-		new_str[i] = f(i, s[i]);
-	return (new_str);
+	while (tam--)
+		new[tam] = f(tam, s[tam]);
+	return (new);
 }

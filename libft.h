@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 20:54:58 by uherrero          #+#    #+#             */
-/*   Updated: 2022/04/09 16:01:56 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/04/09 19:04:32 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,14 @@
 # include "my_types.h" // t_smart_str
 # include "ft_lst/lst.h"
 # include "ft_gnl/get_next_line.h"
+
+// START_FT_BIT
+u_char		ft_bit_clear(u_char var, u_char bit);
+u_char		ft_bit_get(u_char var, u_char bit);
+u_char		ft_bit_set(u_char var, u_char bit);
+u_char		ft_bit_toggle(u_char var, u_char bit);
+u_char		ft_bit(u_char bit);
+// END_FT_BIT
 
 // START_FT_NUMBERS
 int			ft_atoi(const char *str);

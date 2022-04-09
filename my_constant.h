@@ -14,6 +14,12 @@
 
 //SIZE_TYPES
 # define U_CHAR_BITSIZE 8
-
+# if UINT_MAX > 0xffff
+#  define TAM_U_CHAR 16
+# elif UINT_MAX > 0xffffffff
+#  define TAM_U_CHAR 32
+# else
+#  define TAM_U_CHAR __CHAR_BIT__
+# endif
 
 #endif

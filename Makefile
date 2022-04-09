@@ -6,7 +6,7 @@
 #    By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/08 19:37:36 by ulherrer          #+#    #+#              #
-#    Updated: 2022/04/04 15:49:19 by ulherrer         ###   ########.fr        #
+#    Updated: 2022/04/09 19:49:14 by ulherrer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ my_types.h \
 ft_lst/lst.h \
 ft_gnl/get_next_line.h
 
+DIR_BIT = ft_bit/
 DIR_CHAR = ft_char/
 DIR_MEM = ft_mem/
 DIR_NUM = ft_num/
@@ -30,6 +31,13 @@ DIR_LST = ft_lst/
 DIR_GNL = ft_gnl/
 DIR_TIME = ft_cronos/
 DIR_OBJECTS = d_objects/
+
+SOURCES_BIT = \
+ft_bit_clear.c \
+ft_bit_get.c \
+ft_bit_set.c \
+ft_bit_toggle.c \
+ft_bit.c
 
 SOURCES_NUM = \
 ft_atoi.c \
@@ -96,6 +104,7 @@ SOURCES_TIME = \
 ft_time_now.c \
 ft_time_diff.c
 
+ALL_BIT = $(SOURCES_BIT:%.c=$(DIR_BIT)%.c)
 ALL_CHAR = $(SOURCES_CHAR:%.c=$(DIR_CHAR)%.c)
 ALL_MEM = $(SOURCES_MEM:%.c=$(DIR_MEM)%.c)
 ALL_NUM = $(SOURCES_NUM:%.c=$(DIR_NUM)%.c)
@@ -106,6 +115,7 @@ ALL_GNL = $(SOURCES_GNL:%.c=$(DIR_GNL)%.c)
 ALL_TIME = $(SOURCES_TIME:%.c=$(DIR_TIME)%.c)
 
 ALL_SOURCES = \
+$(ALL_BIT) \
 $(ALL_CHAR) \
 $(ALL_MEM) \
 $(ALL_NUM) \

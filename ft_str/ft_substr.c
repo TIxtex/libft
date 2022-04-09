@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 18:14:30 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/22 16:42:51 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/04/09 19:45:19 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t		size;
 	char const	*sub_start;
-	char		*str_ret;
+	char		*new;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	if (!(*s) || start > ft_strlen(s))
 		return (ft_strdup(""));
@@ -27,9 +27,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub_start = s;
 	while (*(s++) && len--)
 		size++;
-	str_ret = (char *)ft_calloc(++size, sizeof(char));
-	if (NULL == str_ret)
+	new = (char *)ft_calloc(++size, sizeof(char));
+	if (!new)
 		return (NULL);
-	ft_strlcpy(str_ret, sub_start, size);
-	return (str_ret);
+	ft_strlcpy(new, sub_start, size);
+	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:18:19 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 14:35:34 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/04/09 19:21:24 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 
-	len = 0;
-	while (*(s++))
+	len = ZERO;
+	while (s[len])
 		len++;
 	return (len);
 }
