@@ -5,3 +5,9 @@ u_char	ft_bit_toggle(u_char var, u_char bit)
 {
 	return (var ^= ft_bit(bit));
 }
+
+void	ft_bit_toggle(void *var, u_int *bit)
+{
+	ft_bit(bit);
+	*var = (*var ^= *bit);
+}
