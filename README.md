@@ -2,7 +2,7 @@
 
 [![built with C](https://img.shields.io/badge/built%20with-C-blue.svg)](https://docs.microsoft.com/es-es/cpp/c-language/?view=msvc-170)
 
-```C
+```Makefile
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -10,7 +10,7 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/11/08 19:37:36 by ulherrer          #+#    #+#              #
+#    Created: 2019/11/08 19:37:36 by uherrero          #+#    #+#              #
 #    Updated: 2022/03/22 16:46:53 by ulherrer         ##   ######.es           #
 #                                                                              #
 # **************************************************************************** #
@@ -36,15 +36,10 @@
 ## ft_bit
 
 ```C
-void      ft_bit(u_int *x);
 u_char    ft_bit(u_char x);
-void      ft_bit_clear(void *var, u_int *bit);
 u_char    ft_bit_clear(u_char var, u_int bit);
-void      ft_bit_get(u_char var, u_char bit);
 u_char    ft_bit_get(u_char var, u_char bit);
-void      ft_bit_set(void *var, u_int *bit);
 u_char    ft_bit_set(u_char var, u_char bit);
-void      ft_bit_toggle(void *var, u_int *bit);
 u_char    ft_bit_toggle(u_char var, u_char bit);
 ```
 

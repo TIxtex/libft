@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 20:54:58 by uherrero          #+#    #+#             */
-/*   Updated: 2022/04/09 19:04:32 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/05/04 16:53:42 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,10 @@
 # include "ft_gnl/get_next_line.h"
 
 // START_FT_BIT
-void		ft_bit_clear(u_char var, u_char bit);
 u_char		ft_bit_clear(u_char var, u_int bit);
-void		ft_bit_get(u_char var, u_char bit);
 u_char		ft_bit_get(u_char var, u_char bit);
-void		ft_bit_set(u_char var, u_char bit);
 u_char		ft_bit_set(u_char var, u_char bit);
-void		ft_bit_toggle(u_char var, u_char bit);
 u_char		ft_bit_toggle(u_char var, u_char bit);
-void		ft_bit(u_char bit);
 u_char		ft_bit(u_char x);
 // END_FT_BIT
 
