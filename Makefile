@@ -6,7 +6,7 @@
 #    By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/08 19:37:36 by ulherrer          #+#    #+#              #
-#    Updated: 2022/04/09 19:49:14 by ulherrer         ###   ########.fr        #
+#    Updated: 2022/05/01 11:16:01 by ulherrer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,6 @@ DIR_PUT = ft_put/
 DIR_LST = ft_lst/
 DIR_GNL = ft_gnl/
 DIR_TIME = ft_cronos/
-DIR_OBJECTS = d_objects/
 
 SOURCES_BIT = \
 ft_bit_clear.c \
