@@ -27,17 +27,22 @@
 
 // START_FT_BIT
 void		ft_bit_clear(u_char var, u_char bit);
+u_char		ft_bit_clear(u_char var, u_int bit);
 void		ft_bit_get(u_char var, u_char bit);
+u_char		ft_bit_get(u_char var, u_char bit);
 void		ft_bit_set(u_char var, u_char bit);
+u_char		ft_bit_set(u_char var, u_char bit);
 void		ft_bit_toggle(u_char var, u_char bit);
+u_char		ft_bit_toggle(u_char var, u_char bit);
 void		ft_bit(u_char bit);
+u_char		ft_bit(u_char x);
 // END_FT_BIT
 
-// START_FT_NUMBERS
+// START_FT_NUM
 int			ft_atoi(const char *str);
 char		*ft_itoa(int n);
 char		*ft_utoa(unsigned int n);
-//END_FT_NUMBERS
+//END_FT_NUM
 
 // START_FT_CHAR
 int			ft_isalnum(int c);
