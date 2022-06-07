@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 18:57:45 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 14:35:08 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:23:58 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ void	ft_putnbr_fd(int n, int fd)
 		n *= -1;
 		write(fd, "-", sizeof(char));
 	}
-	ft_digit(n, fd);
+	ft_digit((unsigned int)n, fd);
 }

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/08 20:54:58 by uherrero          #+#    #+#             */
-/*   Updated: 2022/05/04 16:53:42 by ulherrer         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -25,6 +13,7 @@
 # include "ft_lst/lst.h"
 # include "ft_gnl/get_next_line.h"
 
+
 // START_FT_BIT
 u_char		ft_bit_clear(u_char var, u_int bit);
 u_char		ft_bit_get(u_char var, u_char bit);
@@ -35,6 +24,7 @@ u_char		ft_bit(u_char x);
 
 // START_FT_NUM
 int			ft_atoi(const char *str);
+long		ft_atol(const char *str);
 char		*ft_itoa(int n);
 char		*ft_utoa(unsigned int n);
 //END_FT_NUM

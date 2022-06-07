@@ -15,26 +15,25 @@
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
 	const char	*str;
+	size_t		x;
 
-	if (!dest)
+	if (NULL == dest)
 		return (ZERO);
+	x = dstsize;
 	str = src;
-	if (dstsize--)
-	{
-		while (dstsize-- && *src)
+	if (ZERO != dstsize)
+		while (ZERO != --dstsize)
+		{
 			*(dest++) = *(src++);
-		*dest = '\0';
+			if ('\0' == *(dest - 1))
+				break;
+		}
+	if (ZERO == dstsize)
+	{
+		if (ZERO != x)
+			*dest = '\0';
+		while ('\0' != *(src++))
+			;
 	}
-	return (ft_strlen(str));
+	return (src - str - 1);
 }
-
-/*
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
-{
-	if (!dst)
-		return (ZERO);
-	if (dstsize)
-		dst = (char *)ft_memmove((void *)dst, (const void *)src, dstsize);
-	return (ft_strlen(src));
-}
-*/

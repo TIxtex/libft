@@ -6,7 +6,7 @@
 /*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 18:17:47 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 14:35:11 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:24:16 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s)
+	if (NULL != s)
 		write(fd, s, ft_strlen(s) * sizeof(char));
 }

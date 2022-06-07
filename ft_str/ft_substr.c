@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char const	*sub_start;
 	char		*new;
 
-	if (!s)
+	if (NULL == s)
 		return (NULL);
 	if (!(*s) || start > ft_strlen(s))
 		return (ft_strdup(""));
@@ -28,8 +28,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	while (*(s++) && len--)
 		size++;
 	new = (char *)ft_calloc(++size, sizeof(char));
-	if (!new)
-		return (NULL);
 	ft_strlcpy(new, sub_start, size);
 	return (new);
 }

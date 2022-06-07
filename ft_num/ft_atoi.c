@@ -14,17 +14,17 @@
 
 int	ft_atoi(const char *str)
 {
-	int			neg;
-	long		val;
+	int				negative;
+	unsigned int	value;
 
-	val = ZERO;
-	neg = 1;
-	while (ft_isspace(*str))
+	value = ZERO;
+	negative = TRUE;
+	while (TRUE == ft_isspace(*str))
 		str++;
-	if (*str == '+' || *str == '-')
-		if (*(str++) == '-')
-			neg = -1;
-	while (ft_isdigit(*str))
-		val = (val * 10) + (*(str++) - '0');
-	return ((int)(val * neg));
+	if ('+' == *str || '-' == *str)
+		if ('-' == *(str++))
+			negative = -1;
+	while (TRUE == ft_isdigit(*str))
+		value = value * 10 + *(str++) - '0';
+	return ((int)value * negative);
 }
