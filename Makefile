@@ -41,6 +41,7 @@ ft_bit.c
 SOURCES_NUM = \
 ft_atoi.c \
 ft_atol.c \
+ft_strtol.c \
 ft_itoa.c
 
 SOURCES_CHAR = \

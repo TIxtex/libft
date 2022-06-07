@@ -85,6 +85,7 @@ int       ft_toupper(int c);
 ```C
 int       ft_atoi(const char *str);
 long      ft_atol(const char *str);
+long int  ft_strtol(const char *str, char **endptr, int base);
 char      *ft_itoa(int n);
 char      *ft_utoa(unsigned int n);
 ```
