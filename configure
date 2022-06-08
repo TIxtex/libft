@@ -1,2 +1,0 @@
-CC='clang -std=c11'
-CFLAGS='-Wall -Wextra -Werror'
