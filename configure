@@ -1,2 +1,2 @@
 CC=clang
-CFLAGS=-std=c11 -Wall -Wextra -Werror
+CFLAGS='-std=c11 -Wall -Wextra -Werror'
