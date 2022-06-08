@@ -13,6 +13,6 @@ long int	ft_atol(const char *str)
 		if ('-' == *(str++))
 			negative = -1;
 	while (TRUE == ft_isdigit(*str))
-		value = value * 10 + *(str++) - '0';
+		value = value * 10 + *(str++) - '0'; 
 	return ((long)value * negative);
 }

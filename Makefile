@@ -11,8 +11,8 @@
 # **************************************************************************** #
 
 NAME = libft.a
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CC = clang -std=c11
+CFLAGS = -Wall -Wextra -Werror 
 
 INCLUDE = \
 libft.h \
