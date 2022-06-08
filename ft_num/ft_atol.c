@@ -14,5 +14,5 @@ long int	ft_atol(const char *str)
 			negative = -1;
 	while (TRUE == ft_isdigit(*str))
 		value = value * 10 + *(str++) - '0'; 
-	return ((long)value * negative);
+	return ((long) value * negative);
 }

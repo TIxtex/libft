@@ -1,4 +1,5 @@
-.vscode
+.vscode/*
 *.o
+a.out
 *.a
 tmp*
