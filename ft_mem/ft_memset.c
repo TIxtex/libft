@@ -14,9 +14,9 @@
 
 void	*ft_memset(void *dst, int c, size_t len)
 {
-	register size_t	size;
-	register u_int	cr;
-	register u_char	*dest;
+	register size_t			size;
+	register unsigned int	cr;
+	register unsigned char	*dest;
 
 	size = len;
 	cr = c;
