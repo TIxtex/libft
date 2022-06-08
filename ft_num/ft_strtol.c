@@ -2,7 +2,7 @@
 
 long int	ft_strtol(const char *str, char **endptr, int base)
 {
-	register char			*start;
+	register const char		*start;
 	register unsigned long	value;
 	register int			negative;
 	register int			flag;
@@ -10,7 +10,7 @@ long int	ft_strtol(const char *str, char **endptr, int base)
 
 	value = ZERO;
 	negative = FALSE;
-	any = FALSE;
+	flag = FALSE;
 	start = str;
 	while (TRUE == ft_isspace(*str))
 		str++;
@@ -67,7 +67,7 @@ long int	ft_strtol(const char *str, char **endptr, int base)
 		if (FALSE != flag)
 			*endptr = (char *) str - 1;
 		else
-			*endptr = start;
+			*endptr = (char *) start;
 	}
 
 	return ((long int) value);

@@ -12,6 +12,7 @@
 # define Z_UPPER 90
 # define A_LOWER 97
 # define Z_LOWER 122
+# define _1K 1000 
 
 # define ISUPPER(x) ((unsigned)x - 'A' < 26)
 
