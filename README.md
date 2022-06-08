@@ -36,11 +36,11 @@
 ## ft_bit
 
 ```C
-u_char    ft_bit(u_char x);
-u_char    ft_bit_clear(u_char var, u_int bit);
-u_char    ft_bit_get(u_char var, u_char bit);
-u_char    ft_bit_set(u_char var, u_char bit);
-u_char    ft_bit_toggle(u_char var, u_char bit);
+unsigned char ft_bit(unsigned char x);
+unsigned char ft_bit_clear(unsigned char var, unsigned int bit);
+unsigned char ft_bit_get(unsigned char var, unsigned char bit);
+unsigned char ft_bit_set(unsigned char var, unsigned char bit);
+unsigned char ft_bit_toggle(unsigned char var, unsigned char bit);
 ```
 
 ## ft_put

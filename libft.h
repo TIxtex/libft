@@ -5,7 +5,6 @@
 # include <unistd.h> // write();
 # include <stdlib.h> // malloc();
 # include <stddef.h> // NULL, size_t, offsetof();
-# include <sys/types.h>// u_char
 # include <sys/time.h>// gettimeofday();
 # include <sys/errno.h>
 # include "my_constant.h"
@@ -15,11 +14,11 @@
 
 
 // START_FT_BIT
-u_char		ft_bit_clear(u_char var, u_int bit);
-u_char		ft_bit_get(u_char var, u_char bit);
-u_char		ft_bit_set(u_char var, u_char bit);
-u_char		ft_bit_toggle(u_char var, u_char bit);
-u_char		ft_bit(u_char x);
+unsigned char	ft_bit_clear(unsigned char var, unsigned int bit);
+unsigned char	ft_bit_get(unsigned char var, unsigned char bit);
+unsigned char	ft_bit_set(unsigned char var, unsigned char bit);
+unsigned char	ft_bit_toggle(unsigned char var, unsigned char bit);
+unsigned char	ft_bit(unsigned char x);
 // END_FT_BIT
 
 // START_FT_NUM
