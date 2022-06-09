@@ -5,6 +5,6 @@ typedef struct	s_smart_str
 {
 	size_t		size;
 	char		*str;
-}				t_smart_str;
+}				t_smart_str, t_ss;
 
 #endif

@@ -27,7 +27,7 @@
   - [ft_char](#ft_char)
   - [ft_num](#ft_num)
   - [ft_str](#ft_str)
-  - [ft_lst](#ft_lst)
+  - [ft_list](#ft_list)
   - [ft_gnl](#ft_gnl)
   - [ft_cronos](#ft_cronos)
 
@@ -112,7 +112,7 @@ char      *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char      **ft_split(char const *s, char c);
 ```
 
-## ft_lst
+## ft_list
 
 ```C
 struct s_list;

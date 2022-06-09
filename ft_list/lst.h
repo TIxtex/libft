@@ -3,18 +3,18 @@
 
 typedef struct s_list
 {
-	void			*content;
-	struct s_list	*next;
-}				t_list;
+	void				*content;
+	struct s_list		*next;
+}						t_list;
 
 typedef struct s_list_link
 {
-	void			*content;
+	void				*content;
 	struct s_list_link	*next;
 	struct s_list_link	*prev;
-}				t_list_link;
+}						t_list_link;
 
-//START_FT_LST
+/**	FT_LIST	**/
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **alst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -24,7 +24,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-//END_FT_LST
+
+/**	FT_LIST_LINK	**/
 
 #endif
 

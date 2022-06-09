@@ -12,7 +12,7 @@
 
 NAME = libft.a
 CC = clang -std=c11
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror
 
 INCLUDE = \
 libft.h \
@@ -27,7 +27,7 @@ DIR_MEM = ft_mem/
 DIR_NUM = ft_num/
 DIR_STR = ft_str/
 DIR_PUT = ft_put/
-DIR_LST = ft_lst/
+DIR_LST = ft_list/
 DIR_GNL = ft_gnl/
 DIR_TIME = ft_cronos/
 
