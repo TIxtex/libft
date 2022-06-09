@@ -18,7 +18,7 @@ INCLUDE = \
 libft.h \
 my_constant.h \
 my_types.h \
-ft_lst/lst.h \
+ft_list/lst.h \
 ft_gnl/get_next_line.h
 
 DIR_BIT = ft_bit/
@@ -27,7 +27,7 @@ DIR_MEM = ft_mem/
 DIR_NUM = ft_num/
 DIR_STR = ft_str/
 DIR_PUT = ft_put/
-DIR_LST = ft_list/
+DIR_LIST = ft_list/
 DIR_GNL = ft_gnl/
 DIR_TIME = ft_cronos/
 
@@ -87,7 +87,7 @@ ft_puterror.c \
 ft_putnbr_fd.c \
 ft_putstr_fd.c
 
-SOURCES_LST = \
+SOURCES_LIST = \
 ft_lstadd_back_bonus.c \
 ft_lstadd_front_bonus.c \
 ft_lstclear_bonus.c \
@@ -111,7 +111,7 @@ ALL_MEM = $(SOURCES_MEM:%.c=$(DIR_MEM)%.c)
 ALL_NUM = $(SOURCES_NUM:%.c=$(DIR_NUM)%.c)
 ALL_STR = $(SOURCES_STR:%.c=$(DIR_STR)%.c)
 ALL_PUT = $(SOURCES_PUT:%.c=$(DIR_PUT)%.c)
-ALL_LST = $(SOURCES_LST:%.c=$(DIR_LST)%.c)
+ALL_LIST = $(SOURCES_LIST:%.c=$(DIR_LIST)%.c)
 ALL_GNL = $(SOURCES_GNL:%.c=$(DIR_GNL)%.c)
 ALL_TIME = $(SOURCES_TIME:%.c=$(DIR_TIME)%.c)
 
@@ -122,7 +122,7 @@ $(ALL_MEM) \
 $(ALL_NUM) \
 $(ALL_STR) \
 $(ALL_PUT) \
-$(ALL_LST) \
+$(ALL_LIST) \
 $(ALL_GNL) \
 $(ALL_TIME)
 

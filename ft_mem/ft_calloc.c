@@ -14,12 +14,12 @@
 
 void	*ft_calloc(size_t num_items, size_t size_item)
 {
-	void	*new;
-	size_t	bytes;
+	register void	*new;
+	register size_t	bytes;
 
-	bytes = size_item * num_items;
+	bytes = num_items * size_item;
 	new = malloc(bytes);
-	if (NULL == new)
-		return (NULL);
-	return (ft_memset(new, ZERO, bytes));
+	if (NULL != new)
+		ft_bzero(new, bytes);
+	return (new);
 }

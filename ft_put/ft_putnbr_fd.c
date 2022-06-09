@@ -11,23 +11,21 @@
 /* ************************************************************************** */
 
 #include "../libft.h"
+#define BASE 10
 
-static void	ft_digit(unsigned int nb, int fd)
+static void	ft_digit(unsigned int nu, int fd, char c)
 {
-	char	c;
-
-	if (nb / 10)
-		ft_digit(nb / 10, fd);
-	c = '0' + (nb % 10);
-	write(fd, &c, sizeof(char));
+	if (nu / BASE)
+		ft_digit(nu / BASE, fd, nu % BASE);
+	write(fd, &(c += '0'), sizeof(char));
 }
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n < 0)
+	if (ZERO > n)
 	{
-		n *= -1;
+		n = -n;
 		write(fd, "-", sizeof(char));
 	}
-	ft_digit((unsigned int)n, fd);
+	ft_digit((unsigned int)n, fd, n % BASE);
 }

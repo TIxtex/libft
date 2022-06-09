@@ -14,8 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (c < A_UPPER || c > Z_UPPER)
-		return (c);
-	else
-		return (c TO_LOWER);
+	if (c >= A_UPPER && c <= Z_UPPER)
+		c = c TO_LOWER
+	return (c);
 }

@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	size = n;
 	dst = s;
-	while (size--)
-		if (dst[size])
+	while (ZERO != size--)
+		if (ZERO != dst[size])
 			dst[size] = dst[size] << TAM_U_CHAR | dst[size];
 }

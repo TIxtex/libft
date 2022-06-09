@@ -14,7 +14,7 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	if (!n)
+	if (ZERO == n)
 		return (NULL);
 	*(unsigned char *)(dst++) = *(const unsigned char *)(src++);
 	if (*(unsigned char *)dst == (unsigned char)c)

@@ -69,6 +69,5 @@ long int	ft_strtol(const char *str, char **endptr, int base)
 		else
 			*endptr = (char *) start;
 	}
-
 	return ((long int) value);
 }
