@@ -9,7 +9,7 @@
 # include <sys/errno.h>
 # include "my_constant.h"
 # include "my_types.h" // t_smart_str
-# include "ft_lst/lst.h"
+# include "ft_list/lst.h"
 # include "ft_gnl/get_next_line.h"
 
 
