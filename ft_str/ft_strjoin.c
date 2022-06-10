@@ -14,19 +14,20 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*nw_str;
-	char	*start;
+	register char	*nw_str;
+	register char	*start;
 
-	if (!s1 || !s2)
+	if (NULL == s1 || NULL == s2)
 		return (NULL);
 	nw_str = (char *)ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
-	if (NULL == nw_str)
-		return (NULL);
 	start = nw_str;
-	while (*s1)
-		*(nw_str++) = *(s1++);
-	while (*s2)
-		*(nw_str++) = *(s2++);
+	if (NULL != nw_str)
+	{
+		while ('\0' != *s1)
+			*(nw_str++) = *(s1++);
+		while ('\0' != *s2)
+			*(nw_str++) = *(s2++);
+	}
 	return (start);
 }
 

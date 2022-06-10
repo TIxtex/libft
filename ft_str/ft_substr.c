@@ -14,18 +14,18 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t		size;
-	char const	*sub_start;
-	char		*new;
+	register char const	*sub_start;
+	register char		*new;
+	register size_t		size;
 
 	if (NULL == s)
 		return (NULL);
-	if (!(*s) || start > ft_strlen(s))
+	if ('\0' == *s || start > ft_strlen(s))
 		return (ft_strdup(""));
 	s += start;
-	size = ZERO;
 	sub_start = s;
-	while (*(s++) && len--)
+	size = ZERO;
+	while ('\0' != *(s++) && ZERO != len--)
 		size++;
 	new = (char *)ft_calloc(++size, sizeof(char));
 	ft_strlcpy(new, sub_start, size);

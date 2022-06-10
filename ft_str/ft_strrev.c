@@ -14,7 +14,7 @@
 
 static void	ft_swapchar(char *c1, char *c2)
 {
-	char	aux;
+	register char	aux;
 
 	aux = *c1;
 	*c1 = *c2;
@@ -23,8 +23,8 @@ static void	ft_swapchar(char *c1, char *c2)
 
 void	ft_strrev(char *str)
 {
-	size_t	size;
-	char	*end;
+	register size_t	size;
+	register char	*end;
 
 	size = ft_strlen(str);
 	end = str + size - 1;

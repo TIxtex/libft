@@ -14,16 +14,15 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*new;
-	unsigned int	tam;
+	register char	*new;
+	register size_t	tam;
 
-	if (!s)
+	if (NULL == s)
 		return (NULL);
 	tam = ft_strlen(s);
 	new = (char *)ft_calloc(tam + 1, sizeof(char));
-	if (!new)
-		return (NULL);
-	while (tam--)
-		new[tam] = f(tam, s[tam]);
+	if (NULL != new)
+		while (ZERO != tam--)
+			new[tam] = f(tam, s[tam]);
 	return (new);
 }

@@ -14,20 +14,19 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*str_aux;
-	char	c_aux;
+	register char	*str_aux;
+	register char	c_aux;
 
 	c_aux = (char)c;
 	str_aux = NULL;
-	while (*s)
+	while ('\0' != *s)
 	{
 		if (*s == c_aux)
 			str_aux = (char *)s;
 		s++;
 	}
-	if (str_aux)
-		return (str_aux);
-	else if (!c_aux)
-		return ((char *)s);
-	return (NULL);
+	if (NULL == str_aux)
+		if (ZERO == c_aux)
+			str_aux = (char *)s;
+	return (str_aux);
 }

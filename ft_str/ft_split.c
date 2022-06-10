@@ -12,16 +12,16 @@
 
 #include "../libft.h"
 
-static unsigned int	ft_count_word(char const *s, char c)
+static size_t	ft_count_word(char const *s, char c)
 {
-	unsigned int	size;
+	register size_t	size;
 
-	size = 0;
-	while (*s)
+	size = ZERO;
+	while ('\0' != *s)
 	{
-		while (*s == c && *s)
+		while (*s == c && '\0' != *s)
 			s++;
-		while (*s != c && *s)
+		while (*s != c && '\0' != *s)
 			s++;
 		if (*(s - 1) != c)
 			size++;
@@ -31,28 +31,28 @@ static unsigned int	ft_count_word(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char		**str;
-	char const	*start;
-	char const	*finish;
-	size_t		i;
-	size_t		size;
+	register char		**str;
+	register char const	*start;
+	register char const	*finish;
+	register size_t		i;
+	register size_t		size;
 
-	if (!s)
+	if (NULL == s)
 		return (NULL);
 	size = ft_count_word(s, c);
 	str = (char **)ft_calloc(1 + size, sizeof(char *));
-	if (!str)
+	if (NULL == str)
 		return (NULL);
-	i = 0;
-	while (*s && size--)
+	i = ZERO;
+	while (ZERO != size--)
 	{
 		while (*s == c)
 			s++;
 		start = s;
-		while (*s && *s != c)
+		while ('\0' != *s && *s != c)
 			s++;
 		finish = s;
-		str[i++] = ft_substr(start, 0, finish - start);
+		str[i++] = ft_substr(start, ZERO, finish - start);
 	}
 	return (str);
 }

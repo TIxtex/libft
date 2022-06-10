@@ -14,16 +14,16 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char const	*start;
-	char const	*end;
-	char		*str_ret;
+	register char const	*start;
+	register char const	*end;
+	register char		*str_ret;
 
 	if (!s1)
 		return (NULL);
 	start = s1;
 	while (*s1 && ft_strchr(set, *s1))
 		start = ++s1;
-	while (*s1)
+	while ('\0' != *s1)
 		s1++;
 	end = --s1;
 	while (ft_strchr(set, *s1) && end >= start)
