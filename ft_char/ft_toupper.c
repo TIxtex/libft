@@ -15,6 +15,6 @@
 int	ft_toupper(int c)
 {
 	if (c >= A_LOWER && c <= Z_LOWER)
-		c = c TO_UPPER
+		c = c TO_UPPER;
 	return (c);
 }
