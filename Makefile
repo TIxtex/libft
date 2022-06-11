@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = libft.a
-CC = clang -std=c11
+CC = clang -std=c89
 CFLAGS = -Wall -Wextra -Werror
 
 INCLUDE = \
