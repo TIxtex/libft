@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 18:28:46 by uherrero          #+#    #+#             */
-/*   Updated: 2019/11/08 20:01:12 by uherrero         ###   ########.fr       */
+/*   Created: 2019/11/06 11:36:57 by uherrero          #+#    #+#             */
+/*   Updated: 2019/11/09 13:37:16 by uherrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include <../libft.h>
+
+int	ft_isascii(int x)
 {
-	return ((unsigned)c - '0' < 10);
+	if ((unsigned) x < 128)
+		return (TRUE);
+	return (FALSE);
 }

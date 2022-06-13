@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 15:47:42 by uherrero          #+#    #+#             */
-/*   Updated: 2022/04/03 18:30:56 by ulherrer         ###   ########.fr       */
+/*   Created: 2019/10/08 18:28:46 by uherrero          #+#    #+#             */
+/*   Updated: 2019/11/18 00:10:58 by uherrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_tolower(int c)
+int	ft_isalpha(int x)
 {
-	if (c >= A_UPPER && c <= Z_UPPER)
-		c = c TO_LOWER;
-	return (c);
+	if ((unsigned) x - A_LOWER < 26 || (unsigned) x - A_UPPER < 26)
+		return (TRUE);
+	return (FALSE);
 }

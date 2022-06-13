@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 18:28:46 by uherrero          #+#    #+#             */
-/*   Updated: 2019/11/18 00:10:58 by uherrero         ###   ########.fr       */
+/*   Updated: 2019/11/08 20:01:12 by uherrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_isalpha(int c)
-{
-	return (!(c < A_UPPER || c > Z_LOWER || (c > Z_UPPER && c < A_LOWER)));
+int	ft_isdigit(int x)
+{	
+	if ((unsigned) x - '0' < 10)
+		return (TRUE);
+	return (FALSE);
 }

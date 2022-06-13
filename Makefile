@@ -44,7 +44,7 @@ ft_atol.c \
 ft_strtol.c \
 ft_itoa.c
 
-SOURCES_CHAR = \
+SOURCES_CTYPE = \
 ft_isalnum.c \
 ft_isalpha.c \
 ft_isascii.c \
@@ -106,7 +106,7 @@ ft_time_now.c \
 ft_time_diff.c
 
 ALL_BIT = $(SOURCES_BIT:%.c=$(DIR_BIT)%.c)
-ALL_CHAR = $(SOURCES_CHAR:%.c=$(DIR_CHAR)%.c)
+ALL_CTYPE = $(SOURCES_CTYPE:%.c=$(DIR_CTYPE)%.c)
 ALL_MEM = $(SOURCES_MEM:%.c=$(DIR_MEM)%.c)
 ALL_NUM = $(SOURCES_NUM:%.c=$(DIR_NUM)%.c)
 ALL_STR = $(SOURCES_STR:%.c=$(DIR_STR)%.c)
@@ -117,7 +117,7 @@ ALL_TIME = $(SOURCES_TIME:%.c=$(DIR_TIME)%.c)
 
 ALL_SOURCES = \
 $(ALL_BIT) \
-$(ALL_CHAR) \
+$(ALL_CTYPE) \
 $(ALL_MEM) \
 $(ALL_NUM) \
 $(ALL_STR) \

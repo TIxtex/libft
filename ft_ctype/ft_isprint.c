@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 17:41:14 by uherrero          #+#    #+#             */
-/*   Updated: 2019/11/08 23:34:25 by uherrero         ###   ########.fr       */
+/*   Created: 2019/11/06 15:44:36 by uherrero          #+#    #+#             */
+/*   Updated: 2019/11/09 13:38:13 by uherrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(int c)
+#include "../libft.h"
+
+int	ft_isprint(int x)
 {
-	return (c == ' ' || (unsigned)c - '	' < 5);
+	if ((unsigned) x - 32 < 95)
+		return (TRUE);
+	return (FALSE);
 }

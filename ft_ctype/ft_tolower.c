@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 11:36:57 by uherrero          #+#    #+#             */
-/*   Updated: 2019/11/09 13:37:16 by uherrero         ###   ########.fr       */
+/*   Created: 2019/11/06 15:47:42 by uherrero          #+#    #+#             */
+/*   Updated: 2022/04/03 18:30:56 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "../libft.h"
+
+int	ft_tolower(int x)
 {
-	return ((unsigned)c < 128);
+	if ((unsigned) x - A_UPPER < 26)
+		x = x TO_LOWER;
+	return (x);
 }

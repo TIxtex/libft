@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 15:44:36 by uherrero          #+#    #+#             */
-/*   Updated: 2019/11/09 13:38:13 by uherrero         ###   ########.fr       */
+/*   Created: 2019/11/06 15:47:42 by uherrero          #+#    #+#             */
+/*   Updated: 2022/04/03 17:42:40 by ulherrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "../libft.h"
+
+int	ft_toupper(int x)
 {
-	return ((unsigned)c - 32 < 95);
+	if ((unsigned) x - A_LOWER < 26)
+		x = x TO_UPPER;
+	return (x);
 }
