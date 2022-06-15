@@ -14,7 +14,7 @@
 # define Z_LOWER 122
 # define _1K 1000
 
-//SIZE_TYPES
+/** SIZE_TYPES **/
 # define U_CHAR_BITSIZE 8
 # if UINT_MAX > 0xffff
 #  define TAM_U_CHAR 16

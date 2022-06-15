@@ -13,11 +13,14 @@
 #include "../libft.h"
 #define BASE 10
 
-static void	ft_digit(unsigned int nu, int fd, char c)
+static void	ft_digit(unsigned int nu, int fd)
 {
+	char	aux;
+
+	aux = nu % BASE + '0';
 	if (nu / BASE)
-		ft_digit(nu / BASE, fd, nu % BASE + '0');
-	write(fd, &c, sizeof(char));
+		ft_digit(nu / BASE, fd);
+	write(fd, &aux, sizeof(char));
 }
 
 void	ft_putnbr_fd(int n, int fd)
@@ -27,5 +30,5 @@ void	ft_putnbr_fd(int n, int fd)
 		n = -n;
 		write(fd, "-", sizeof(char));
 	}
-	ft_digit((unsigned int)n, fd, n % BASE + '0');
+	ft_digit((unsigned int) n, fd);
 }

@@ -30,14 +30,17 @@ char		*ft_utoa(unsigned int n);
 /**	END_FT_NUM	**/
 
 /**	START_FT_CTYPE	**/
-int			ft_isalnum(int c);
-int			ft_isalpha(int c);
-int			ft_isascii(int c);
-int			ft_isdigit(int c);
-int			ft_isprint(int c);
-int			ft_isspace(int c);
-int			ft_tolower(int c);
-int			ft_toupper(int c);
+int			ft_isalnum(int x);
+int			ft_isalpha(int x);
+int			ft_isascii(int x);
+int			ft_isdigit(int x);
+int			ft_islower(int x);
+int			ft_isprint(int x);
+int			ft_isspace(int x);
+int			ft_isupper(int x);
+int			ft_isxdigit(int x);
+int			ft_tolower(int x);
+int			ft_toupper(int x);
 /**	END_FT_CTYPE	**/
 
 /**	START_FT_STR	**/
@@ -57,6 +60,7 @@ char		*ft_strchr(const char *s, int c);
 char		*ft_strdup(const char *s1);
 void		ft_strrev(char *str);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 char		**ft_split(char const *s, char c);
 /**	END_FT_STR	**/
 

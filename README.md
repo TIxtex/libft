@@ -24,7 +24,7 @@
   - [ft_bit](#ft_bit)
   - [ft_put](#ft_put)
   - [ft_mem](#ft_mem)
-  - [ft_char](#ft_char)
+  - [ft_ctype](#ft_ctype)
   - [ft_num](#ft_num)
   - [ft_str](#ft_str)
   - [ft_list](#ft_list)
@@ -67,7 +67,7 @@ int       ft_memcmp(const void *s1, const void *s2, size_t n);
 void      *ft_memchr(const void *s, int c, size_t n);
 ```
 
-## ft_char
+## ft_ctype
 
 ```C
 int       ft_isalnum(int c);

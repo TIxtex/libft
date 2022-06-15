@@ -18,8 +18,8 @@ void	ft_bzero(void *s, size_t n)
 	register unsigned char	*dst;
 
 	size = n;
-	dst = s;
+	dst = (unsigned char *)s;
 	while (ZERO != size--)
 		if (ZERO != dst[size])
-			dst[size] = dst[size] << TAM_U_CHAR | dst[size];
+			dst[size] = ZERO;
 }

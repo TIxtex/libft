@@ -14,12 +14,12 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*str_aux;
-	char	chr;
+	register char	*str_aux;
+	register char	chr;
 
 	chr = (char)c;
-	str_aux = (char *)s;
-	while (*(++str_aux))
+	str_aux = (char *)s - TRUE;
+	while ('\0' != *(++str_aux))
 		if (*str_aux == chr)
 			return (str_aux);
 	if ('\0' != chr)

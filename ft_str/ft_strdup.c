@@ -14,10 +14,10 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*new;
-	size_t	size;
+	register char	*new;
+	register size_t	size;
 
-	size = ft_strlen(s1) + 1;
+	size = ft_strlen(s1) + TRUE;
 	new = (char *)ft_calloc(size, sizeof(char));
 	ft_strlcpy(new, s1, size);
 	return (new);

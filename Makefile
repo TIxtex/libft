@@ -22,7 +22,7 @@ ft_list/lst.h \
 ft_gnl/get_next_line.h
 
 DIR_BIT = ft_bit/
-DIR_CHAR = ft_char/
+DIR_CTYPE = ft_ctype/
 DIR_MEM = ft_mem/
 DIR_NUM = ft_num/
 DIR_STR = ft_str/
@@ -41,7 +41,6 @@ ft_bit.c
 SOURCES_NUM = \
 ft_atoi.c \
 ft_atol.c \
-ft_strtol.c \
 ft_itoa.c
 
 SOURCES_CTYPE = \
@@ -72,6 +71,7 @@ ft_strjoin.c \
 ft_strlcat.c \
 ft_strlcpy.c \
 ft_strlen.c \
+ft_striteri.c \
 ft_strmapi.c \
 ft_strncmp.c \
 ft_strnstr.c \
@@ -136,6 +136,7 @@ $(NAME): $(OBJECTS) $(INCLUDE)
 	ranlib $(NAME)
 
 all: $(NAME)
+bonus: $(NAME)
 clean:
 	/bin/rm -rf $(OBJECTS)
 fclean: clean

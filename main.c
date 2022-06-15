@@ -1,17 +1,17 @@
 #include "libft.h"
 #include <stdio.h>	/** DEBUG **/
 
-#define PRUEBA ""
-#define FUN &ft_strtol
-#define RET long
+#define PRUEBA 57
+#define FUN &ft_putnbr_fd
+#define RET void
 
 int main(void)
 {
-	RET (*ft_)();
+	RET (*ft_)(int, int);
 
 	ft_ = FUN;
-	printf("FT_MY->%ld<-\n", ft_("1"), NULL, 10);
-	printf("REAL_->%ld<-\n", strtol("1", NULL, 10));
+	ft_(PRUEBA, STDOUT_FILENO);
+	printf("\nREAL_->%d<-\n", PRUEBA);
 
 
 
