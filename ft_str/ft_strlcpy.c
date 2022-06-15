@@ -17,8 +17,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	register const char	*str;
 	register size_t		x;
 
-	if (NULL == dest)
-		return (ZERO);
 	x = dstsize;
 	str = src;
 	if (ZERO != dstsize)

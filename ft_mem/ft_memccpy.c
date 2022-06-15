@@ -14,11 +14,25 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	if (ZERO == n)
-		return (NULL);
-	*(unsigned char *)(dst++) = *(const unsigned char *)(src++);
-	if (*(unsigned char *)dst == (unsigned char)c)
-		return (dst);
-	else
-		return (ft_memccpy(dst, src, c, --n));
+	register const unsigned char	*source;
+	register unsigned char			*destiny;
+	register size_t					loop;
+	register unsigned char			c_aux;
+
+	if (ZERO != n)
+	{
+		source = (unsigned char *) src;
+		destiny = (unsigned char *) dst;
+		loop = n;
+		c_aux = c;
+		while (ZERO < loop--)
+		{
+			*(destiny) = *(source);
+			if (*destiny == c_aux)
+				return(++destiny);
+			destiny++;
+			source++;
+		}
+	}
+	return (NULL);
 }

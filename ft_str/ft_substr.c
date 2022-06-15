@@ -28,6 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	while ('\0' != *(s++) && ZERO != len--)
 		size++;
 	new = (char *)ft_calloc(++size, sizeof(char));
-	ft_strlcpy(new, sub_start, size);
+	if (NULL != new)
+		ft_strlcpy(new, sub_start, size);
 	return (new);
 }

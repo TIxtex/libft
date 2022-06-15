@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t num_items, size_t size_item)
 {
 	register void	*new;
-	size_t	bytes;
+	register size_t	bytes;
 
 	bytes = num_items * size_item;
 	new = malloc(bytes);

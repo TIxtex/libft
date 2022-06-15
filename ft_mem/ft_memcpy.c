@@ -14,20 +14,28 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	register size_t	i;
+	register const unsigned char	*source;
+	register unsigned char			*destiny;
+	register size_t					x;
 
-	i = -1;
-	while (++i < n)
-		ft_memset(&dst[i], ((char *)src)[i], sizeof(char));
+	source = src;
+	destiny = dst;
+	x = -1;
+	if (NULL != dst || NULL != src)
+		while (++x < n)
+			destiny[x] = source[x];
 	return (dst);
 }
 
 void	*ft_memcpy_r(void *dst, const void *src, size_t n)
 {
-	if (ZERO != n)
-	{
-		ft_memcpy(dst + TRUE, src + TRUE, --n);
-		*(char *)(dst) = *(const char *)(src);
-	}
+	register const unsigned char	*source;
+	register unsigned char			*destiny;
+
+	source = src;
+	destiny = dst;
+	if (NULL != dst || NULL != src)
+		while (ZERO < n--)
+			destiny[n] = source[n];
 	return (dst);
 }
