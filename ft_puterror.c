@@ -1,4 +1,4 @@
-#include "../libft.h"
+#include "libft.h"
 
 void	ft_puterror(const char *error)
 {
