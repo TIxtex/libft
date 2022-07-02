@@ -20,6 +20,7 @@
 
 - [libft](#libft)
 - [table of contents](#table-of-contents)
+- [subject](#subject)
 - [modules](#modules)
   - [ft_bit](#ft_bit)
   - [ft_put](#ft_put)
@@ -30,6 +31,12 @@
   - [ft_list](#ft_list)
   - [ft_gnl](#ft_gnl)
   - [ft_cronos](#ft_cronos)
+
+# subject
+
+```{r echo=FALSE}
+xfun::embed_file("es.subject.pdf")
+```
 
 # modules
 
