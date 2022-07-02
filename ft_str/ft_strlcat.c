@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 13:05:35 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 14:35:28 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/06/16 21:10:03 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dstsize--;
 		n++;
 	}
-	while (*src && dstsize > 1)
+	while (*src && dstsize-- > 1)
 	{
 		*(dst++) = *(src++);
-		dstsize--;
 		n++;
 	}
 	if (n > len_dst)

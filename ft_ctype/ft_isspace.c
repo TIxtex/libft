@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:41:14 by uherrero          #+#    #+#             */
-/*   Updated: 2019/11/08 23:34:25 by uherrero         ###   ########.fr       */
+/*   Updated: 2022/06/16 19:41:20 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_isspace(int x)
+int	ft_isspace(int c)
 {
-	if (' ' == x || (unsigned)x - '	' < 5)
+	if (' ' == c || (unsigned) c - '	' < 5)
 		return (TRUE);
 	return (FALSE);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 13:47:59 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/22 16:43:55 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/06/16 19:56:38 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

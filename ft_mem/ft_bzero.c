@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:39:49 by uherrero          #+#    #+#             */
-/*   Updated: 2022/04/09 19:08:43 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/06/15 16:51:13 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	register size_t			size;
-	register unsigned char	*dst;
+	register char	*dst;
 
-	size = n;
-	dst = (unsigned char *)s;
-	while (ZERO < size--)
-		if (ZERO != dst[size])
-			dst[size] = ZERO;
+	dst = (char *)s;
+	while (ZERO != n--)
+			*(dst++) = '\0';
 }

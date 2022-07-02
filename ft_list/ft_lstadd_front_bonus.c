@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 22:09:21 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/08 14:33:38 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/06/16 19:54:55 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	if (new)
+	if (NULL != new)
 	{
 		new->next = *alst;
 		*alst = new;

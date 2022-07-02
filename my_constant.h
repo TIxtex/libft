@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   my_constant.h                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/16 19:19:46 by uliherre          #+#    #+#             */
+/*   Updated: 2022/06/16 20:21:34 by uliherre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef MY_CONSTANT_H
 # define MY_CONSTANT_H
 
@@ -13,15 +25,5 @@
 # define A_LOWER 97
 # define Z_LOWER 122
 # define _1K 1000
-
-/** SIZE_TYPES **/
-# define U_CHAR_BITSIZE 8
-# if UINT_MAX > 0xffff
-#  define TAM_U_CHAR 16
-# elif UINT_MAX > 0xffffffff
-#  define TAM_U_CHAR 32
-# else
-#  define TAM_U_CHAR __CHAR_BIT__
-# endif
 
 #endif

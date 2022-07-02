@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 13:06:34 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/22 16:32:11 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/06/16 20:43:14 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		{
 			*(destiny) = *(source);
 			if (*destiny == c_aux)
-				return(++destiny);
+				return (++destiny);
 			destiny++;
 			source++;
 		}

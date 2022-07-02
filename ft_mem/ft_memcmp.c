@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulherrer <ulherrer@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 19:05:34 by uherrero          #+#    #+#             */
-/*   Updated: 2022/03/22 16:32:33 by ulherrer         ###   ########.fr       */
+/*   Updated: 2022/06/16 19:00:17 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	str_1 = (const unsigned char *)s1;
 	str_2 = (const unsigned char *)s2;
 	while (*str_1 == *str_2 && ZERO != --n)
-		str_1++, str_2++;
+	{
+		str_1++;
+		str_2++;
+	}
 	return (*str_1 - *str_2);
 }

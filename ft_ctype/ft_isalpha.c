@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uherrero <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 18:28:46 by uherrero          #+#    #+#             */
-/*   Updated: 2019/11/18 00:10:58 by uherrero         ###   ########.fr       */
+/*   Updated: 2022/06/16 19:40:45 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_isalpha(int x)
+int	ft_isalpha(int c)
 {
-	if ((unsigned) x - A_LOWER < 26 || (unsigned) x - A_UPPER < 26)
+	if ((unsigned) c - A_LOWER < 26 || (unsigned) c - A_UPPER < 26)
 		return (TRUE);
 	return (FALSE);
 }
