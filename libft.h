@@ -17,12 +17,66 @@
 # include <stdlib.h> /**	malloc();	**/
 # include <stddef.h> /**	NULL, size_t, offsetof();	**/
 # include <limits.h>
-# include <sys/time.h>/**	gettimeofday();	**/
-# include <sys/errno.h>
-# include "my_constant.h"
-# include "my_types.h"
-# include "ft_list/lst.h"
-# include "ft_gnl/get_next_line.h"
+# include <sys/time.h> /**	gettimeofday();	**/
+
+# ifndef MY_CONSTANT_H
+#  define MY_CONSTANT_H
+#  define FALSE 0
+#  define TRUE 1
+#  define ZERO 0
+#  define BYTE 1
+#  define BIT 8
+#  define TO_UPPER - 32
+#  define TO_LOWER + 32
+#  define A_UPPER 65
+#  define Z_UPPER 90
+#  define A_LOWER 97
+#  define Z_LOWER 122
+#  define _1K 1000
+# endif
+
+# ifndef MY_TYPES_H
+#  define MY_TYPES_H
+
+typedef struct s_smart_str	t_smart_str;
+typedef struct s_smart_str	t_ss;
+
+struct	s_smart_str
+{
+	size_t		size;
+	char		*str;
+};
+
+# endif
+
+# ifndef LST_H
+#  define LST_H
+
+typedef struct s_list
+{
+	void				*content;
+	struct s_list		*next;
+}						t_list;
+
+typedef struct s_list_link
+{
+	void				*content;
+	struct s_list_link	*next;
+	struct s_list_link	*prev;
+}						t_list_link;
+
+/**	FT_LIST	**/
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **alst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **alst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+/**	END_FT_LIST	**/
+# endif
 
 /**	START_FT_BIT	**/
 unsigned char	ft_bit_clear(unsigned char var, unsigned int bit);
