@@ -6,7 +6,7 @@
 /*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 18:15:49 by uherrero          #+#    #+#             */
-/*   Updated: 2022/07/02 17:13:24 by uliherre         ###   ########.fr       */
+/*   Updated: 2022/08/15 14:27:27 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	ft_free_split(char **str, int i, size_t *size)
 		free(str[i]);
 	free (str);
 	str = NULL;
-	size = ZERO;
+	*size = ZERO;
 }
 
 static size_t	ft_count_word(char const *s, char c)
