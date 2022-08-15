@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tixtex <tixtex@student.42.fr>              +#+  +:+       +#+        */
+/*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 19:50:56 by uherrero          #+#    #+#             */
-/*   Updated: 2019/12/20 17:43:26 by tixtex           ###   ########.fr       */
+/*   Updated: 2022/08/15 12:41:21 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,35 +23,50 @@ static void	ft_putnbr_itoa(int nb, char *str)
 {
 	if (nb < 0)
 	{
-		nb *= -1;
+		nb = -nb;
 		*(str++) = '-';
 	}
 	ft_digit_itoa(nb, str);
 }
 
-char	*ft_itoa(int n)
+static size_t	ft_numlen(int num)
 {
-	char	*str_num;
+	register size_t			len;
+	register unsigned int	n;
 
-	str_num = (char *)ft_calloc(12, sizeof(char));
-	if (NULL == str_num)
-		return (NULL);
-	ft_putnbr_itoa(n, str_num);
-	if (*str_num == '-')
-		ft_strrev(str_num + 1);
+	len = TRUE;
+	if (ZERO > num)
+	{
+		len++;
+		n = -num;
+	}
 	else
-		ft_strrev(str_num);
-	return (str_num);
+		n = num;
+	while (ZERO < n / 10)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
 }
 
-char	*ft_utoa(unsigned int n)
+char	*ft_itoa(int n)
 {
-	char	*str_num;
+	register size_t	num_len;
+	register char	*str_num;
 
-	str_num = (char *)ft_calloc(11, sizeof(char));
-	if (NULL == str_num)
-		return (NULL);
-	ft_digit_itoa(n, str_num);
-	ft_strrev(str_num);
+	str_num = NULL;
+	num_len = ft_numlen(n);
+	if (ZERO != num_len)
+	{
+		str_num = (char *) ft_calloc(num_len + 1, sizeof(char));
+		if (NULL == str_num)
+			return (NULL);
+		ft_putnbr_itoa(n, str_num);
+		if (*str_num == '-')
+			ft_strrev(str_num + 1);
+		else
+			ft_strrev(str_num);
+	}
 	return (str_num);
 }

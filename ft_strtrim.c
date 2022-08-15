@@ -6,7 +6,7 @@
 /*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 18:04:18 by uherrero          #+#    #+#             */
-/*   Updated: 2022/06/15 16:46:41 by uliherre         ###   ########.fr       */
+/*   Updated: 2022/07/14 17:36:20 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = --s1;
 	while (ft_strchr(set, *s1) && end >= start)
 		end = --s1;
-	if (end - start > 0)
+	if (end - start >= 0)
 	{
 		str_ret = (char *)ft_calloc(2 + end - start, sizeof(char));
 		if (NULL == str_ret)

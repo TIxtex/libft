@@ -6,20 +6,20 @@
 /*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 13:46:15 by uherrero          #+#    #+#             */
-/*   Updated: 2022/07/02 14:33:14 by uliherre         ###   ########.fr       */
+/*   Updated: 2022/07/16 16:07:20 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **alst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (NULL != new && NULL != alst)
+	if (NULL != new && NULL != lst)
 	{
-		*alst = ft_lstlast(*alst);
-		if (NULL == *alst)
-			*alst = new;
+		*lst = ft_lstlast(*lst);
+		if (NULL == *lst)
+			*lst = new;
 		else
-			(*alst)->next = new;
+			(*lst)->next = new;
 	}
 }

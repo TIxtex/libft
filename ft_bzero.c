@@ -6,7 +6,7 @@
 /*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:39:49 by uherrero          #+#    #+#             */
-/*   Updated: 2022/06/15 16:51:13 by uliherre         ###   ########.fr       */
+/*   Updated: 2022/07/04 15:43:43 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 void	ft_bzero(void *s, size_t n)
 {
 	register char	*dst;
+	register size_t	x;
 
 	dst = (char *)s;
-	while (ZERO != n--)
-			*(dst++) = '\0';
+	x = ZERO;
+	while (x != n)
+	{
+		dst[x] = '\0';
+		x++;
+	}
 }
