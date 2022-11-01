@@ -6,7 +6,7 @@
 /*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 19:50:56 by uherrero          #+#    #+#             */
-/*   Updated: 2022/08/15 12:41:21 by uliherre         ###   ########.fr       */
+/*   Updated: 2022/07/17 21:56:05 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,24 @@ static size_t	ft_numlen(int num)
 		len++;
 	}
 	return (len);
+}
+
+void	ft_strrev(char *str)
+{
+	register size_t	size;
+	register char	*end;
+	register char	aux;
+
+	size = ft_strlen(str);
+	end = str + size - 1;
+	while (str < end)
+	{
+		aux = *str;
+		*str = *end;
+		*end = aux;
+		str++;
+		end--;
+	}
 }
 
 char	*ft_itoa(int n)

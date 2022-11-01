@@ -6,15 +6,15 @@
 #    By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/08 19:37:36 by ulherrer          #+#    #+#              #
-#    Updated: 2022/08/15 12:58:05 by uliherre         ###   ########.fr        #
+#    Updated: 2022/07/17 20:50:28 by uliherre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 NAME_BONUS = libft_b.a
 
-CC = gcc -std=c11
-CFLAGS = -Wall -Wextra -Werror -pedantic
+CC = gcc #clang -std=c89
+CFLAGS = -Wall -Wextra -Werror #-pedantic
 
 INCLUDE = libft.h
 
@@ -42,7 +42,6 @@ ft_strjoin.c \
 ft_strlcat.c \
 ft_strlcpy.c \
 ft_strlen.c \
-ft_strrev.c \
 ft_striteri.c \
 ft_strmapi.c \
 ft_strncmp.c \
