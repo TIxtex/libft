@@ -23,11 +23,9 @@ static void	ft_swapchar(char *c1, char *c2)
 
 void	ft_strrev(char *str)
 {
-	register size_t	size;
 	register char	*end;
 
-	size = ft_strlen(str);
-	end = str + size - 1;
+	end = str + ft_strlen(str) - 1;
 	while (str < end)
 		ft_swapchar(str++, end--);
 }

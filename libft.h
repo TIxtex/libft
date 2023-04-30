@@ -47,7 +47,6 @@ struct	s_smart_str
 };
 
 # endif
-
 # ifndef BONUS
 #  define BONUS
 
@@ -68,6 +67,7 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *));
 /**	END_FT_LIST	**/
+
 # endif
 
 /**	START_FT_NUM	**/
@@ -80,6 +80,7 @@ int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isascii(int c);
 int				ft_isdigit(int c);
+int				ft_isxdigit(int c);
 int				ft_islower(int c);
 int				ft_isprint(int c);
 int				ft_isspace(int c);
@@ -105,6 +106,7 @@ char			*ft_strdup(const char *s1);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			**ft_split(char const *s, char c);
+void			ft_strrev(char *str);
 /**	END_FT_STR	**/
 
 /**	START_FT_MEM	**/

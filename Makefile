@@ -13,8 +13,8 @@
 NAME = libft.a
 NAME_BONUS = libft_b.a
 
-CC = gcc #clang -std=c89
-CFLAGS = -Wall -Wextra -Werror #-pedantic
+CC = gcc -std=c89 #clang -std=c89
+CFLAGS = -Wall -Wextra -Werror -pedantic
 
 INCLUDE = libft.h
 
@@ -25,8 +25,13 @@ ft_isalnum.c \
 ft_isalpha.c \
 ft_isascii.c \
 ft_isdigit.c \
+ft_isxdigit.c \
 ft_isprint.c \
 ft_isspace.c \
+ft_isupper.c \
+ft_islower.c \
+ft_toupper.c \
+ft_tolower.c \
 ft_bzero.c \
 ft_memccpy.c \
 ft_memchr.c \
@@ -53,8 +58,8 @@ ft_putchar_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_putstr_fd.c \
-ft_toupper.c \
-ft_tolower.c
+ft_puterror.c \
+ft_strrev.c
 
 SOURCES_BONUS = \
 ft_lstadd_back_bonus.c \
