@@ -56,6 +56,13 @@ typedef struct s_list
 	struct s_list		*next;
 }						t_list;
 
+typedef struct s_list_d
+{
+	void				*content;
+	struct s_list_d		*next;
+	struct s_list_d		*prev;
+}						t_list_d;
+
 /**	FT_LIST	**/
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
@@ -66,7 +73,20 @@ void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *));
+void			del(void *to_del);
 /**	END_FT_LIST	**/
+
+/**	FT_LIST_D	**/
+t_list_d		*ft_lstnew_d(void *content);
+void			ft_lstadd_front_d(t_list_d **lst, t_list_d *new);
+int				ft_lstsize_d(t_list_d *lst);
+t_list_d		*ft_lstlast_d(t_list_d *lst);
+void			ft_lstadd_back_d(t_list_d **lst, t_list_d *new);
+void			ft_lstdelone_d(t_list_d *lst, void (*del)(void *));
+void			ft_lstclear_d(t_list_d **lst, void (*del)(void *));
+void			ft_lstiter_d(t_list_d *lst, void (*f)(void *));
+t_list_d		*ft_lstmap_d(t_list_d *lst, void *(*f)(void *), void(*del)(void *));
+/**	END_FT_LIST_D	**/
 
 # endif
 
@@ -87,7 +107,6 @@ int				ft_isspace(int c);
 int				ft_isupper(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
-
 /**	END_FT_CTYPE	**/
 
 /**	START_FT_STR	**/

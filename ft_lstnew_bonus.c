@@ -24,3 +24,17 @@ t_list	*ft_lstnew(void *content)
 	}
 	return (new);
 }
+
+t_list_d	*ft_lstnew_d(void *content)
+{
+	t_list_d	*new;
+
+	new = (t_list_d *) ft_calloc(TRUE, sizeof(t_list_d));
+	if (NULL != new)
+	{
+		new->next = NULL;
+		new->prev = NULL;
+		new->content = content;
+	}
+	return (new);
+}
