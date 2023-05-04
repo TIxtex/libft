@@ -16,6 +16,7 @@
 # include <unistd.h> /**	write();	**/
 # include <stdlib.h> /**	malloc();	**/
 # include <stddef.h> /**	NULL, size_t, offsetof();	**/
+# include <sys/time.h> /**	gettimeofday()	**/
 # include <limits.h>
 
 # ifndef MY_CONSTANT_H
@@ -79,12 +80,8 @@ void			del(void *to_del);
 /**	FT_LIST_D	**/
 t_list_d		*ft_lstnew_d(void *content);
 void			ft_lstadd_front_d(t_list_d **lst, t_list_d *new);
-int				ft_lstsize_d(t_list_d *lst);
-t_list_d		*ft_lstlast_d(t_list_d *lst);
 void			ft_lstadd_back_d(t_list_d **lst, t_list_d *new);
 void			ft_lstdelone_d(t_list_d *lst, void (*del)(void *));
-void			ft_lstclear_d(t_list_d **lst, void (*del)(void *));
-void			ft_lstiter_d(t_list_d *lst, void (*f)(void *));
 t_list_d		*ft_lstmap_d(t_list_d *lst, void *(*f)(void *), void(*del)(void *));
 /**	END_FT_LIST_D	**/
 
@@ -92,6 +89,7 @@ t_list_d		*ft_lstmap_d(t_list_d *lst, void *(*f)(void *), void(*del)(void *));
 
 /**	START_FT_NUM	**/
 int				ft_atoi(const char *str);
+long int		ft_atol(const char *str);
 char			*ft_itoa(int n);
 /**	END_FT_NUM	**/
 

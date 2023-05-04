@@ -15,7 +15,7 @@
 long int	ft_time_now(void)
 {
 	struct timeval	time;
-
-	gettimeofday(&time, NULL);
+	if (gettimeofday(&time, NULL))
+		ft_puterror("gettimeofday() ft_time_now()");
 	return ((time.tv_sec * _1K) + (time.tv_usec / _1K));
 }

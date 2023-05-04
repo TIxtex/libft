@@ -20,6 +20,7 @@ INCLUDE = libft.h
 
 SOURCES = \
 ft_atoi.c \
+ft_atol.c \
 ft_itoa.c \
 ft_isalnum.c \
 ft_isalpha.c \
@@ -59,7 +60,9 @@ ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_putstr_fd.c \
 ft_puterror.c \
-ft_strrev.c
+ft_strrev.c \
+ft_time_diff.c \
+ft_time_now.c
 
 SOURCES_BONUS = \
 ft_lstadd_back_bonus.c \

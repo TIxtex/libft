@@ -28,7 +28,7 @@ void	ft_lstadd_back_d(t_list_d **lst, t_list_d *new)
 {
 	if (NULL != new && NULL != lst)
 	{
-		*lst = ft_lstlast((t_list *) *lst);
+		*lst = (t_list_d *) ft_lstlast((t_list *) *lst);
 		if (NULL == *lst)
 			*lst = new;
 		else

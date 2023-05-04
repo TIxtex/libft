@@ -45,7 +45,7 @@ char	**ft_split(char const *s, char c)
 	register char		**str;
 	register char const	*start;
 	register size_t		i;
-	size_t				size;
+	register size_t				size;
 
 	if (NULL == s)
 		return (NULL);

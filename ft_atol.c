@@ -14,8 +14,8 @@
 
 long int	ft_atol(const char *str)
 {
-	long			negative;
-	unsigned long	value;
+	register long			negative;
+	register unsigned long	value;
 
 	value = ZERO;
 	negative = TRUE;

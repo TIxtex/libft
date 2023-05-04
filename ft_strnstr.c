@@ -14,10 +14,10 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	unsigned int	flag;
-	size_t			len_aux;
-	const char		*needle_aux;
-	const char		*haystack_aux;
+	register unsigned int	flag;
+	size_t					len_aux;
+	const char				*needle_aux;
+	const char				*haystack_aux;
 
 	if (!(*needle))
 		return ((char *)haystack);
