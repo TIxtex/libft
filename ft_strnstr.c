@@ -16,21 +16,21 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	register unsigned int	flag;
 	size_t					len_aux;
-	const char				*needle_aux;
-	const char				*haystack_aux;
+	register const char		*needle_aux;
+	register const char		*hayst_aux;
 
 	if (!(*needle))
 		return ((char *)haystack);
 	while (*haystack && len--)
 	{
 		needle_aux = (const char *)needle;
-		haystack_aux = (const char *)haystack;
-		if (*needle_aux == *haystack_aux)
+		hayst_aux = (const char *)haystack;
+		if (*needle_aux == *hayst_aux)
 		{
 			len_aux = len + 1;
 			flag = 1;
 			while (*needle_aux && flag)
-				if (*(needle_aux++) != *(haystack_aux++) || !len_aux--)
+				if (*(needle_aux++) != *(hayst_aux++) || !len_aux--)
 					flag = ZERO;
 			if (flag)
 				return ((char *)haystack);
