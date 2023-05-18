@@ -21,12 +21,12 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	}
 }
 
-void	ft_lstadd_front_d(t_list_d **lst, t_list_d *new)
+void	ft_lstadd_front_d(t_list_d **lst, t_list_d **new)
 {
 	if (NULL != new && NULL != *lst)
 	{
-		(*lst)->prev = new;
-		new->next = *lst;
-		*lst = new;
+		(*lst)->prev = *new;
+		(*new)->next = *lst;
+		*lst = *new;
 	}
 }

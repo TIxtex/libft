@@ -79,9 +79,9 @@ void			del(void *to_del);
 
 /**	FT_LIST_D	**/
 t_list_d		*ft_lstnew_d(void *content);
-void			ft_lstadd_front_d(t_list_d **lst, t_list_d *new);
-void			ft_lstadd_back_d(t_list_d **lst, t_list_d *new);
-void			ft_lstdelone_d(t_list_d *lst, void (*del)(void *));
+void			ft_lstadd_front_d(t_list_d **lst, t_list_d **new);
+void			ft_lstadd_back_d(t_list_d **lst, t_list_d **new);
+void			ft_lstdelone_d(t_list_d **lst, void (*del)(void *));
 t_list_d		*ft_lstmap_d(t_list_d *lst, void *(*f)(void *), void(*del)(void *));
 /**	END_FT_LIST_D	**/
 
