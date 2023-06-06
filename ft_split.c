@@ -6,7 +6,7 @@
 /*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 18:15:49 by uherrero          #+#    #+#             */
-/*   Updated: 2022/07/02 17:13:24 by uliherre         ###   ########.fr       */
+/*   Updated: 2023/06/06 18:19:05 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	**ft_split(char const *s, char c)
 	register char		**str;
 	register char const	*start;
 	register size_t		i;
-	register size_t				size;
+	register size_t		size;
 
 	if (NULL == s)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 19:34:46 by uliherre          #+#    #+#             */
-/*   Updated: 2022/07/16 16:27:21 by uliherre         ###   ########.fr       */
+/*   Updated: 2023/06/06 18:20:12 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,8 @@ t_list_d		*ft_lstnew_d(void *content);
 void			ft_lstadd_front_d(t_list_d **lst, t_list_d **new);
 void			ft_lstadd_back_d(t_list_d **lst, t_list_d **new);
 void			ft_lstdelone_d(t_list_d **lst, void (*del)(void *));
-t_list_d		*ft_lstmap_d(t_list_d *lst, void *(*f)(void *), void(*del)(void *));
+t_list_d		*ft_lstmap_d(t_list_d *lst,
+					void *(*f)(void *), void(*del)(void *));
 /**	END_FT_LIST_D	**/
 
 # endif

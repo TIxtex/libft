@@ -6,13 +6,13 @@
 /*   By: uliherre <uliherre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 02:19:13 by uherrero          #+#    #+#             */
-/*   Updated: 2022/07/02 16:58:52 by uliherre         ###   ########.fr       */
+/*   Updated: 2023/06/06 18:18:21 by uliherre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 
